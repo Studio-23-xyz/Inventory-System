@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using com.studio23.ss2.inventorysystem.data;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.TestTools;
 
@@ -12,7 +11,12 @@ using UnityEngine.TestTools;
 public class InventoryFunctionalityTest
 {
     private List<Item> AllItems;
+    private List<Item> RandomSubList;
+
     private InventoryManager _inventoryManager;
+
+    private readonly string _saveDirectory = "SaveData";
+    private readonly string _resourcesPath = "Items";
 
     [SetUp]
     public void Init()
@@ -21,6 +25,12 @@ public class InventoryFunctionalityTest
         _inventoryManager = gameObject.AddComponent<InventoryManager>();
 
         AllItems = Resources.LoadAll<Item>("Items").ToList();
+        RandomSubList = new RandomListGenerator().GetRandomSublist(AllItems, 1, AllItems.Count).ToList();
+
+        foreach (var item in RandomSubList)
+        {
+            InventoryManager.Instance.AddItem(item);
+        }
     }
 
     [UnityTest]
@@ -35,18 +45,14 @@ public class InventoryFunctionalityTest
 
     [UnityTest]
     [Repeat(5)]
-    public IEnumerator AddItem()
+    public IEnumerator HasItem()
     {
-        //Arrange
-        Item item = new RandomListGenerator().GetRandomSublist(AllItems, 1, 1)[0];
-        
-        //Act
-        Assert.IsTrue(InventoryManager.Instance.AddItem(item));
-
-        //Assert
-        Assert.IsTrue(InventoryManager.Instance.HasItem(item));
-
+        // Arrange
+        Item item = new RandomListGenerator().GetRandomSublist(RandomSubList, 1, 1)[0];
         Debug.Log(item.ItemName);
+
+        // Assert
+        Assert.IsTrue(InventoryManager.Instance.HasItem(item));
         yield return null;
     }
 
@@ -54,19 +60,37 @@ public class InventoryFunctionalityTest
     [Repeat(5)]
     public IEnumerator RemoveItem()
     {
-        //Arrange
+        // Arrange
         Item item = new RandomListGenerator().GetRandomSublist(AllItems, 1, 1)[0];
+        Debug.Log(item.ItemName);
 
-        //Act
+        // Act
         if (InventoryManager.Instance.HasItem(item))
         {
             Assert.IsTrue(InventoryManager.Instance.RemoveItem(item));
         }
 
-        //Assert
+        // Assert
         Assert.IsFalse(InventoryManager.Instance.HasItem(item));
 
-        Debug.Log(item.ItemName);
         yield return null;
+    }
+
+    [UnityTest]
+    [Repeat(5)]
+    public IEnumerator SaveInventory()
+    {
+        // Arrange
+        InventoryManager.Instance.SaveInventory();
+
+        // Act
+        //string itemListToBeSaved = JsonConvert.SerializeObject(RandomSubList, Formatting.Indented);
+
+        string path = Path.Combine(Application.persistentDataPath, _saveDirectory, "inventory.json");
+        if (!File.Exists(path)) yield return null;
+        string itemListFromFile = File.ReadAllText(path);
+
+        // Assert
+
     }
 }

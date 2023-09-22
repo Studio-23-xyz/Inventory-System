@@ -47,12 +47,13 @@ public class InventoryManager : MonoBehaviour
         }
         path = Path.Combine(path, "inventory.json");
 
-        List<string> itemIds = new List<string>();
+        List<string> itemNames = new List<string>();
+
         foreach (var item in _items)
         {
-            itemIds.Add(item.ItemName);
+            itemNames.Add(item.ItemName);
         }
-        string json = JsonConvert.SerializeObject(itemIds, Formatting.Indented);
+        string json = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
 
         File.WriteAllText(path, json);
     }
@@ -64,9 +65,10 @@ public class InventoryManager : MonoBehaviour
 
         if (!File.Exists(path)) return;
         string json = File.ReadAllText(path);
-        List<string> itemIds = JsonConvert.DeserializeObject<List<string>>(json);
+        List<string> itemNames = JsonConvert.DeserializeObject<List<string>>(json);
+
         _items.Clear();
-        foreach (var itemName in itemIds)
+        foreach (var itemName in itemNames)
         {
             // Load the item with matching ID from resources
             Item item = Resources.Load<Item>($"{_resourcesPath}/{itemName}");
