@@ -5,10 +5,8 @@ namespace com.studio23.ss2.inventorysystem.data
 {
     [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
     [Serializable]
-    public class Item : ScriptableObject
+    public class Item : ItemBase
     {
-        public string ItemName;
-        public string Description;
-        public Sprite Icon;
+       public Sprite Icon;
     }
 }
