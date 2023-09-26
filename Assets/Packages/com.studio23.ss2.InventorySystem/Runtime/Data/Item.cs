@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-namespace com.studio23.ss2.inventorysystem.data
+namespace Studio23.SS2.InventorySystem.Data
 {
-    [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
-    [Serializable]
-    public class Item : ItemBase
-    {
-       public Sprite Icon;
-    }
+	[CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
+	[Serializable]
+	public class Item : ItemBase
+	{
+		public Sprite Icon;
+	}
 }

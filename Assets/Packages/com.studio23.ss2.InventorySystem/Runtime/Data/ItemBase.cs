@@ -1,10 +1,10 @@
 using UnityEngine;
 
-namespace com.studio23.ss2.inventorysystem.data
+namespace Studio23.SS2.InventorySystem.Data
 {
-    public class ItemBase : ScriptableObject
-    {
-        public string Name;
-        public string Description;
-    }
+	public class ItemBase : ScriptableObject
+	{
+		public string Name;
+		public string Description;
+	}
 }

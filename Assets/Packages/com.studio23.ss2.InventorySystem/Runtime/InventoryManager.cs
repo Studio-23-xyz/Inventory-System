@@ -1,22 +1,25 @@
-using com.studio23.ss2.inventorysystem.data;
+using Studio23.SS2.InventorySystem.Data;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+namespace Studio23.SS2.InventorySystem.Core
 {
-    public static InventoryManager Instance;
+	public class InventoryManager : MonoBehaviour
+	{
+		public static InventoryManager Instance;
 
-    public InventoryBase<Item> Backpack;
-    // public InventoryBase<Item> Journal;
-    // public InventoryBase<Item> Hints;
+		public InventoryBase<Item> Backpack;
+		// public InventoryBase<Item> Journal;
+		// public InventoryBase<Item> Hints;
 
-    void Awake()
-    {
-        Instance = this;
-        Initialize();
-    }
+		void Awake()
+		{
+			Instance = this;
+			Initialize();
+		}
 
-    private void Initialize()
-    {
-        Backpack = new InventoryBase<Item>("Backpack");
-    }
+		private void Initialize()
+		{
+			Backpack = new InventoryBase<Item>("Backpack");
+		}
+	}
 }
