@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 public class InventoryBase<T> where T : ItemBase
 {
     [SerializeField] private List<T> _items;
+    [SerializeField] private List<Blueprint> _blueprints;
     public readonly string SaveDirectory = "SaveData/Inventory";
     public readonly string ResourcesPath;
 
@@ -14,6 +15,7 @@ public class InventoryBase<T> where T : ItemBase
     {
         ResourcesPath = inventoryName;
         _items = new List<T>();
+        _blueprints = new List<Blueprint>();
     }
 
     public bool AddItem(T item)

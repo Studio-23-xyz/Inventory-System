@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace com.studio23.ss2.inventorysystem.data
@@ -6,5 +7,6 @@ namespace com.studio23.ss2.inventorysystem.data
     {
         public string Name;
         public string Description;
+        public string BlueprintName;
     }
 }
