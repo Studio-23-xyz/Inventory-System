@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 [TestFixture]
 public class BackpackFunctionalityTest
 {
-    private InventoryManager _inventoryManager;
+    private InventoryManagerTest _inventoryManagerTest;
 
     private List<Item> _allItems;
     private List<Item> _randomSubList;
@@ -20,14 +20,14 @@ public class BackpackFunctionalityTest
     public void Init()
     {
         GameObject gameObject = new GameObject();
-        _inventoryManager = gameObject.AddComponent<InventoryManager>();
+        _inventoryManagerTest = gameObject.AddComponent<InventoryManagerTest>();
 
         _allItems = Resources.LoadAll<Item>("Backpack").ToList();
         _randomSubList = new RandomListGenerator().GetRandomSublist(_allItems, 1, _allItems.Count).ToList();
 
         foreach (var item in _randomSubList)
         {
-            InventoryManager.Instance.Backpack.AddItem(item);
+            InventoryManagerTest.Instance.Backpack.AddItem(item);
         }
     }
 
@@ -35,7 +35,7 @@ public class BackpackFunctionalityTest
     public IEnumerator InstanceCheck()
     {
         yield return new WaitForFixedUpdate();
-        Assert.NotNull(_inventoryManager);
+        Assert.NotNull(_inventoryManagerTest);
     }
 
     [UnityTest, Order(5), Repeat(5)]
@@ -46,13 +46,13 @@ public class BackpackFunctionalityTest
         Debug.Log(item.Name);
 
         // Act
-        if (InventoryManager.Instance.Backpack.HasItem(item))
+        if (InventoryManagerTest.Instance.Backpack.HasItem(item))
         {
-            Assert.IsTrue(InventoryManager.Instance.Backpack.RemoveItem(item));
+            Assert.IsTrue(InventoryManagerTest.Instance.Backpack.RemoveItem(item));
         }
 
         // Assert
-        Assert.IsFalse(InventoryManager.Instance.Backpack.HasItem(item));
+        Assert.IsFalse(InventoryManagerTest.Instance.Backpack.HasItem(item));
 
         yield return null;
     }
@@ -65,7 +65,7 @@ public class BackpackFunctionalityTest
         Debug.Log(item.Name);
 
         // Assert
-        Assert.IsTrue(InventoryManager.Instance.Backpack.HasItem(item));
+        Assert.IsTrue(InventoryManagerTest.Instance.Backpack.HasItem(item));
         yield return null;
     }
 
@@ -73,7 +73,7 @@ public class BackpackFunctionalityTest
     public IEnumerator SaveInventory()
     {
         // Arrange
-        InventoryManager.Instance.Backpack.SaveInventory();
+        InventoryManagerTest.Instance.Backpack.SaveInventory();
 
         // Act
         List<string> itemNames = new List<string>();
@@ -83,7 +83,7 @@ public class BackpackFunctionalityTest
         }
         string itemListToBeSaved = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
 
-        string path = Path.Combine(Application.persistentDataPath, InventoryManager.Instance.Backpack.SaveDirectory, $"{InventoryManager.Instance.Backpack.ResourcesPath}.json");
+        string path = Path.Combine(Application.persistentDataPath, InventoryManagerTest.Instance.Backpack.SaveDirectory, $"{InventoryManagerTest.Instance.Backpack.ResourcesPath}.json");
         if (!File.Exists(path)) yield return null;
         string itemListFromFile = File.ReadAllText(path);
         
@@ -95,10 +95,10 @@ public class BackpackFunctionalityTest
     public IEnumerator LoadInventory()
     {
         // Arrange
-        InventoryManager.Instance.Backpack.LoadInventory();
+        InventoryManagerTest.Instance.Backpack.LoadInventory();
 
         // Act
-        List<Item> allItems = InventoryManager.Instance.Backpack.GetAll();
+        List<Item> allItems = InventoryManagerTest.Instance.Backpack.GetAll();
 
         // Assert
         CollectionAssert.AreEqual(_randomSubList, allItems);

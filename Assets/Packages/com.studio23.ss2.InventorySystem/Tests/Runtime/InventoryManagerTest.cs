@@ -1,13 +1,12 @@
 using com.studio23.ss2.inventorysystem.data;
 using UnityEngine;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManagerTest : MonoBehaviour
 {
-    public static InventoryManager Instance;
+    public static InventoryManagerTest Instance;
 
     public InventoryBase<Item> Backpack;
-    // public InventoryBase<Item> Journal;
-    // public InventoryBase<Item> Hints;
+
 
     void Awake()
     {
