@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 
-namespace com.studio23.ss2.inventorysystem.data
+namespace Studio23.SS2.InventorySystem.Data
 {
-    [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
+    [CreateAssetMenu(fileName = "New Item", menuName = "Studio-23/Inventory System/New Item")]
     [Serializable]
     public class Item : ItemBase
     {

@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using com.studio23.ss2.inventorysystem.data;
 using NUnit.Framework;
+using Studio23.SS2.InventorySystem.Data;
 
 public class BackpackItemsValidNamingTest
 {
