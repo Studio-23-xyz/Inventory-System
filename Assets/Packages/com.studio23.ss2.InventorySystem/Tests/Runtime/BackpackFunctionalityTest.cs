@@ -1,7 +1,9 @@
+using Cysharp.Threading.Tasks;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using Studio23.SS2.InventorySystem.Core;
 using Studio23.SS2.InventorySystem.Data;
+using Studio23.SS2.SaveSystem.Core;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -12,97 +14,127 @@ using UnityEngine.TestTools;
 [TestFixture]
 public class BackpackFunctionalityTest
 {
-	private InventoryManager _inventoryManager;
+  
+    private InventoryBase<Item> Backpack;
 
-	private List<Item> _allItems;
-	private List<Item> _randomSubList;
+    private List<Item> _allItems;
+    private List<Item> _randomSubList;
 
-	[OneTimeSetUp]
-	public void Init()
-	{
-		GameObject gameObject = new GameObject();
-		_inventoryManager = gameObject.AddComponent<InventoryManager>();
+    [OneTimeSetUp]
+    public void Init()
+    {
+        GameObject testObject = new GameObject();
+        testObject.AddComponent<SaveSystem>();
+        Backpack = new InventoryBase<Item>("Backpack");
 
-		_allItems = Resources.LoadAll<Item>("Backpack").ToList();
-		_randomSubList = new RandomListGenerator().GetRandomSublist(_allItems, 1, _allItems.Count).ToList();
+        _allItems = Resources.LoadAll<Item>("Inventory System/Backpack").ToList();
+        _randomSubList = new RandomListGenerator().GetRandomSublist(_allItems, 1, _allItems.Count).ToList();
 
-		foreach (var item in _randomSubList)
-		{
-			InventoryManager.Instance.Backpack.AddItem(item);
-		}
-	}
+        foreach (var item in _randomSubList)
+        {
+            Backpack.AddItem(item);
+        }
+    }
 
-	[UnityTest, Order(1)]
-	public IEnumerator InstanceCheck()
-	{
-		yield return new WaitForFixedUpdate();
-		Assert.NotNull(_inventoryManager);
-	}
+   
 
-	[UnityTest, Order(5), Repeat(5)]
-	public IEnumerator RemoveItem()
-	{
-		// Arrange
-		Item item = new RandomListGenerator().GetRandomSublist(_allItems, 1, 1)[0];
-		Debug.Log(item.Name);
+    [UnityTest, Order(10), Repeat(5)]
+    public IEnumerator RemoveItem()
+    {
+        // Arrange
+        Item item = new RandomListGenerator().GetRandomSublist(_allItems, 1, 1)[0];
+        Debug.Log(item.Name);
 
-		// Act
-		if (InventoryManager.Instance.Backpack.HasItem(item))
-		{
-			Assert.IsTrue(InventoryManager.Instance.Backpack.RemoveItem(item));
-		}
+        // Act
+        if (Backpack.HasItem(item))
+        {
+            Assert.IsTrue(Backpack.RemoveItem(item));
+        }
 
-		// Assert
-		Assert.IsFalse(InventoryManager.Instance.Backpack.HasItem(item));
+        // Assert
+        Assert.IsFalse(Backpack.HasItem(item));
 
-		yield return null;
-	}
+        yield return null;
+    }
 
-	[UnityTest, Order(2), Repeat(5)]
-	public IEnumerator HasItem()
-	{
-		// Arrange
-		Item item = new RandomListGenerator().GetRandomSublist(_randomSubList, 1, 1)[0];
-		Debug.Log(item.Name);
+    [UnityTest, Order(2), Repeat(5)]
+    public IEnumerator HasItem()
+    {
+        // Arrange
+        Item item = new RandomListGenerator().GetRandomSublist(_randomSubList, 1, 1)[0];
+        Debug.Log(item.Name);
 
-		// Assert
-		Assert.IsTrue(InventoryManager.Instance.Backpack.HasItem(item));
-		yield return null;
-	}
+        // Assert
+        Assert.IsTrue(Backpack.HasItem(item));
+        yield return null;
+    }
 
-	[UnityTest, Order(3)]
-	public IEnumerator SaveInventory()
-	{
-		// Arrange
-		InventoryManager.Instance.Backpack.SaveInventory();
+    [UnityTest, Order(3)]
+    public IEnumerator SaveInventory_NO_Encryption() => UniTask.ToCoroutine(async () =>
+    {
 
-		// Act
-		List<string> itemNames = new List<string>();
-		foreach (var item in _randomSubList)
-		{
-			itemNames.Add(item.Name);
-		}
-		string itemListToBeSaved = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
+        // Arrange
+        await Backpack.SaveInventory(false);
 
-		string path = Path.Combine(Application.persistentDataPath, InventoryManager.Instance.Backpack.SaveDirectory, $"{InventoryManager.Instance.Backpack.ResourcesPath}.json");
-		if (!File.Exists(path)) yield return null;
-		string itemListFromFile = File.ReadAllText(path);
+        // Act
+        List<string> itemNames = new List<string>();
+        foreach (var item in _randomSubList)
+        {
+            itemNames.Add(item.Name);
+        }
+        string itemListToBeSaved = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
 
-		// Assert
-		Assert.IsTrue(itemListToBeSaved.Equals(itemListFromFile));
-	}
+        string path = Path.Combine(Backpack.ItemsDirectory, $"{Backpack.Inventoryname}.tm");
 
-	[UnityTest, Order(4)]
-	public IEnumerator LoadInventory()
-	{
-		// Arrange
-		InventoryManager.Instance.Backpack.LoadInventory();
+        string itemListFromFile = await File.ReadAllTextAsync(path);
 
-		// Act
-		List<Item> allItems = InventoryManager.Instance.Backpack.GetAll();
+        // Assert
+        Assert.IsTrue(itemListToBeSaved.Equals(itemListFromFile));
 
-		// Assert
-		CollectionAssert.AreEqual(_randomSubList, allItems);
-		yield return null;
-	}
+
+    });
+
+
+    [UnityTest, Order(4)]
+    public IEnumerator LoadInventory_NO_Encryption() => UniTask.ToCoroutine(async () =>
+    {
+
+        // Arrange
+        await Backpack.LoadInventory(false);
+
+        // Act
+        List<Item> allItems = Backpack.GetAll();
+
+        // Assert
+        CollectionAssert.AreEqual(_randomSubList, allItems);
+
+    });
+
+
+    [UnityTest, Order(5)]
+    public IEnumerator Encrypted_Save_Load() => UniTask.ToCoroutine(async () =>
+    {
+
+        // Arrange
+        await Backpack.SaveInventory();
+        await Backpack.LoadInventory();
+
+        // Act
+        List<Item> allItems = Backpack.GetAll();
+
+        // Assert
+        CollectionAssert.AreEqual(_randomSubList, allItems);
+
+    });
+
+
+
+    [OneTimeTearDown]
+    public void TearDown()
+    {
+        string ItemsDirectory = Backpack.ItemsDirectory;
+        Directory.Delete(ItemsDirectory, true);
+    }
+
+
 }

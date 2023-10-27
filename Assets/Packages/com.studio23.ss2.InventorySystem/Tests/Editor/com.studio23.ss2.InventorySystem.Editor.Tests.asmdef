@@ -1,9 +1,9 @@
 {
-    "name": "com.studio23.ss2.InventorySystem.Editor.Tests",
+    "name": "com.studio23.ss2.inventorysystem.Editor.Tests",
     "rootNamespace": "",
     "references": [
         "UnityEngine.TestRunner",
-        "com.studio23.ss2.InventorySystem"
+        "com.studio23.ss2.inventorysystem"
     ],
     "includePlatforms": [
         "Editor"
