@@ -1,32 +1,44 @@
 {
-  "name": "com.studio23.ss2.inventorysystem",
-  "version": "1.0.0",
-  "displayName": "Inventory System",
-  "description": "Streamline and enhance your game's inventory management with our Unity package. This powerful tool simplifies the creation and management of player inventories, making it easy to handle items, equipment, and resources, allowing you to focus on crafting the ultimate gaming experience.",
-  "unity": "2022.3",
-  "unityRelease": "9f1",
-  "documentationUrl": "https://github.com/Studio-23-xyz/Inventory-System/tree/dev",
-  "changelogUrl": "https://github.com/Studio-23-xyz/Inventory-System/tree/dev",
-  "licensesUrl": "https://github.com/Studio-23-xyz/Inventory-System/tree/dev",
-  "scopedRegistries":  [
-    {
-      "name": "com.studio23.ss2",
-      "url": "https://studio-23.xyz",
-      "scopes": [
-        "com.studio23.ss2"
-      ]
-    }], 
-  "dependencies": {
-    "com.unity.nuget.newtonsoft-json": "3.2.1"
- },
- "keywords": [
-    "Inventory",
-    "Inventory System",
-    "System"
-  ],
-  "author": {
-    "name": "Studio 23",
-    "email": "contact@studio-23.xyz",
-    "url": "https://studio-23.xyz"
-  }
+    "name": "com.studio23.ss2.inventorysystem",
+    "version": "1.1.0",
+    "displayName": "Inventory System",
+    "description": "This is a boilerplate code for implementing inventory systems in unity games",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://studio-23-xyz.github.io/inventory-System/manual/",
+    "changelogUrl": "https://studio-23-xyz.github.io/inventory-System/changelog/CHANGELOG.html",
+    "licensesUrl": "https://api.github.com/licenses/mit",
+    "scopedRegistries": [
+        {
+            "name": "Studio 23",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.studio23.ss2"
+            ]
+        }
+    ],
+    "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.studio23.ss2.savesystem": "1.16"
+    },
+    "keywords": [
+        "Inventory",
+        "System"
+    ],
+    "samples": [
+        {
+            "displayName": "Demo",
+            "description": "A small sample to demonstrate the abilities of the package.",
+            "path": "Samples~/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Studio-23-xyz/Inventory-System.git"
+    },
+    "author": {
+        "name": "Studio 23",
+        "email": "contact@studio-23.xyz",
+        "url": "https://studio-23.xyz"
+    }
 }
