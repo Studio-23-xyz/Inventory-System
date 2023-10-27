@@ -24,14 +24,6 @@ jobs:
     - name: Git Subtree Split
       run: git subtree split -P Assets/Packages/${{ steps.get-package-name.outputs.package-name }}/ -b upm
 
-    - name: split upm branch
-      run: |
-        git checkout upm
-        if [[ -d "Samples" ]]; then
-          git mv Samples Samples~
-          rm -f Samples.meta
-        fi
-   
 
     - name: Get Version from package.json
       id: get-version
@@ -43,5 +35,10 @@ jobs:
 
     - name: Push Branch and Tags
       run: |
+        git checkout upm
+        if [[ -d "Samples" ]]; then
+          git mv Samples Samples~
+          rm -f Samples.meta
+        fi
         git push -f -u origin upm
         git push --tags
