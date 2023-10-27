@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c1bbb2e4079d7b46b22aa7dfce2df34, type: 3}
-  m_Name: MasterKey
+  m_Name: Rusty Key
   m_EditorClassIdentifier: 
-  Name: MasterKey
-  Description: Opens Everything
-  Icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  Id: 123
+  Name: Rusty Key
+  Description: A Rusty Key that opens something?
+  Icon: {fileID: 21300000, guid: 8f5497b6bb13d0c4b84ba333e70c8d4b, type: 3}

@@ -27,7 +27,7 @@ public class BackpackFunctionalityTest
         testObject.AddComponent<SaveSystem>();
         Backpack = new InventoryBase<Item>("Backpack");
 
-        _allItems = Resources.LoadAll<Item>("Backpack").ToList();
+        _allItems = Resources.LoadAll<Item>("Inventory System/Backpack").ToList();
         _randomSubList = new RandomListGenerator().GetRandomSublist(_allItems, 1, _allItems.Count).ToList();
 
         foreach (var item in _randomSubList)
@@ -38,7 +38,7 @@ public class BackpackFunctionalityTest
 
    
 
-    [UnityTest, Order(5), Repeat(5)]
+    [UnityTest, Order(10), Repeat(5)]
     public IEnumerator RemoveItem()
     {
         // Arrange
@@ -111,7 +111,7 @@ public class BackpackFunctionalityTest
     });
 
 
-    [UnityTest, Order(4)]
+    [UnityTest, Order(5)]
     public IEnumerator Encrypted_Save_Load() => UniTask.ToCoroutine(async () =>
     {
 

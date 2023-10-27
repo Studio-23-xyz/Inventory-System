@@ -8,6 +8,10 @@ using UnityEngine;
 [assembly: InternalsVisibleTo("com.studio23.ss2.inventorysystem.Tests")]
 namespace Studio23.SS2.InventorySystem.Core
 {
+    /// <summary>
+    /// Create New inventories by passing new types of objects. This is the base class.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class InventoryBase<T> where T : ItemBase
     {
         [SerializeField] private List<T> _items;
@@ -41,7 +45,13 @@ namespace Studio23.SS2.InventorySystem.Core
 
         public List<T> GetAll() => _items;
 
-
+        /// <summary>
+        /// Saves inventory data using savesystem library
+        /// </summary>
+        /// <param name="enableEncryption"></param>
+        /// <param name="encryptionKey"></param>
+        /// <param name="encryptionIV"></param>
+        /// <returns></returns>
         public async UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
         {
 
@@ -58,6 +68,14 @@ namespace Studio23.SS2.InventorySystem.Core
 
         }
 
+
+        /// <summary>
+        /// Loads the saved inventory data using savesystem library
+        /// </summary>
+        /// <param name="enableEncryption"></param>
+        /// <param name="encryptionKey"></param>
+        /// <param name="encryptionIV"></param>
+        /// <returns></returns>
         public async UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
         {
 
@@ -66,7 +84,7 @@ namespace Studio23.SS2.InventorySystem.Core
             _items.Clear();
             foreach (var itemName in itemNames)
             {
-                T item = Resources.Load<T>($"{Inventoryname}/{itemName}");
+                T item = Resources.Load<T>($"Inventory System/{Inventoryname}/{itemName}");
                 _items.Add(item);
             }
         }
