@@ -1,0 +1,102 @@
+{
+  "api/Global.BackpackFunctionalityTest.html": {
+    "href": "api/Global.BackpackFunctionalityTest.html",
+    "title": "Class BackpackFunctionalityTest | |",
+    "keywords": "Class BackpackFunctionalityTest Namespace Global public class BackpackFunctionalityTest Inheritance object BackpackFunctionalityTest Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Encrypted_Save_Load() public IEnumerator Encrypted_Save_Load() Returns IEnumerator HasItem() public IEnumerator HasItem() Returns IEnumerator Init() public void Init() LoadInventory_NO_Encryption() public IEnumerator LoadInventory_NO_Encryption() Returns IEnumerator RemoveItem() public IEnumerator RemoveItem() Returns IEnumerator SaveInventory_NO_Encryption() public IEnumerator SaveInventory_NO_Encryption() Returns IEnumerator TearDown() public void TearDown()"
+  },
+  "api/Global.BackpackItemsValidNamingTest.html": {
+    "href": "api/Global.BackpackItemsValidNamingTest.html",
+    "title": "Class BackpackItemsValidNamingTest | |",
+    "keywords": "Class BackpackItemsValidNamingTest Namespace Global public class BackpackItemsValidNamingTest Inheritance object BackpackItemsValidNamingTest Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ValidNamingCase(Item) public void ValidNamingCase(Item item) Parameters item Item"
+  },
+  "api/Global.Hint.html": {
+    "href": "api/Global.Hint.html",
+    "title": "Class Hint | |",
+    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description"
+  },
+  "api/Global.InventoryManager.html": {
+    "href": "api/Global.InventoryManager.html",
+    "title": "Class InventoryManager | |",
+    "keywords": "Class InventoryManager Namespace Global public class InventoryManager : MonoBehaviour Inheritance object InventoryManager Fields Backpack public InventoryBase<Item> Backpack Field Value InventoryBase<Item> Hints public InventoryBase<Hint> Hints Field Value InventoryBase<Hint>"
+  },
+  "api/Global.RandomEnumerableGenerator.html": {
+    "href": "api/Global.RandomEnumerableGenerator.html",
+    "title": "Class RandomEnumerableGenerator | |",
+    "keywords": "Class RandomEnumerableGenerator Namespace Global public class RandomEnumerableGenerator Inheritance object RandomEnumerableGenerator Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetRandomSubsequence<T>(IEnumerable<T>, int, int) public IEnumerable<T> GetRandomSubsequence<T>(IEnumerable<T> originalSequence, int minSize, int maxSize) Parameters originalSequence IEnumerable<T> minSize int maxSize int Returns IEnumerable<T> Type Parameters T"
+  },
+  "api/Global.RandomListGenerator.html": {
+    "href": "api/Global.RandomListGenerator.html",
+    "title": "Class RandomListGenerator | |",
+    "keywords": "Class RandomListGenerator Namespace Global public class RandomListGenerator Inheritance object RandomListGenerator Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods GetRandomSublist<T>(List<T>, int, int) public List<T> GetRandomSublist<T>(List<T> originalList, int minSize, int maxSize) Parameters originalList List<T> minSize int maxSize int Returns List<T> Type Parameters T"
+  },
+  "api/Global.html": {
+    "href": "api/Global.html",
+    "title": "Namespace | |",
+    "keywords": "Namespace Classes BackpackFunctionalityTest BackpackItemsValidNamingTest Hint InventoryManager RandomEnumerableGenerator RandomListGenerator"
+  },
+  "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html",
+    "title": "Class InventoryBase<T> | |",
+    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields Inventoryname public readonly string Inventoryname Field Value string SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
+  },
+  "api/Studio23.SS2.InventorySystem.Core.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Core.html",
+    "title": "Namespace Studio23.SS2.InventorySystem.Core | |",
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Core Classes InventoryBase<T> Create New inventories by passing new types of objects. This is the base class."
+  },
+  "api/Studio23.SS2.InventorySystem.Data.Item.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Data.Item.html",
+    "title": "Class Item | |",
+    "keywords": "Class Item Namespace Studio23.SS2.InventorySystem.Data [Serializable] public class Item : ItemBase Inheritance object ItemBase Item Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Icon public Sprite Icon Field Value Sprite"
+  },
+  "api/Studio23.SS2.InventorySystem.Data.ItemBase.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Data.ItemBase.html",
+    "title": "Class ItemBase | |",
+    "keywords": "Class ItemBase Namespace Studio23.SS2.InventorySystem.Data public class ItemBase : ScriptableObject Inheritance object ItemBase Derived Hint Item Fields Description public string Description Field Value string Id public string Id Field Value string Name public string Name Field Value string"
+  },
+  "api/Studio23.SS2.InventorySystem.Data.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Data.html",
+    "title": "Namespace Studio23.SS2.InventorySystem.Data | |",
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Data Classes Item ItemBase"
+  },
+  "api/Studio23.SS2.InventorySystem.Editor.BackpackEditorWindow.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Editor.BackpackEditorWindow.html",
+    "title": "Class BackpackEditorWindow | |",
+    "keywords": "Class BackpackEditorWindow Namespace Studio23.SS2.InventorySystem.Editor public class BackpackEditorWindow Inheritance object BackpackEditorWindow Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods ShowWindow() public void ShowWindow()"
+  },
+  "api/Studio23.SS2.InventorySystem.Editor.InventorySystemWizard.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Editor.InventorySystemWizard.html",
+    "title": "Class InventorySystemWizard | |",
+    "keywords": "Class InventorySystemWizard Namespace Studio23.SS2.InventorySystem.Editor public class InventorySystemWizard : EditorWindow Inheritance object InventorySystemWizard Methods ShowWindow() public static void ShowWindow()"
+  },
+  "api/Studio23.SS2.InventorySystem.Editor.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Editor.html",
+    "title": "Namespace Studio23.SS2.InventorySystem.Editor | |",
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Editor Classes BackpackEditorWindow InventorySystemWizard"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "| |",
+    "keywords": "This is the documentation for the Scripting APIs of this package."
+  },
+  "changelog/CHANGELOG.html": {
+    "href": "changelog/CHANGELOG.html",
+    "title": "Changelog | |",
+    "keywords": "Changelog [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| |",
+    "keywords": "This page redirects to the manual."
+  },
+  "license/LICENSE.html": {
+    "href": "license/LICENSE.html",
+    "title": "| |",
+    "keywords": "MIT License Copyright (c) 2023 Studio-23 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "Inventory System | |",
+    "keywords": "Inventory System Inventory System is a boilerplate library for implementing Inventory needs for your game. Table of Contents Installation Usage Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/Inventory-System.git#upm Usage Using Inventory System Access the Inventory System Wizard from top toolbar Studio-23 > Inventory System > Wizard Create new items by manually putting names and icons Or Bulk Create Get the csv template using the get template button. Create the icons folder and put all the icons in there. in the template name the icons with their items Press Generate"
+  }
+}
