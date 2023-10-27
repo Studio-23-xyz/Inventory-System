@@ -30,10 +30,16 @@ jobs:
         if [[ -d "Samples" ]]; then
           git mv Samples Samples~
           rm -f Samples.meta
-          git commit -am "fix: Samples => Samples~"
         fi
-        git push -f -u origin upm
 
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+          author_name: Warhammer4000
+          author_email: tazimtazim2012@gmail.com
+          message: 'fix: Samples => Samples~'
+
+    
     - name: Get Version from package.json
       id: get-version
       run: echo ::set-output name=version::$(jq -r .version ${{ steps.find-package-json.outputs.package-json-path }})
