@@ -31,15 +31,10 @@ jobs:
           git mv Samples Samples~
           rm -f Samples.meta
         fi
-
-    - name: Commit changes
-      uses: EndBug/add-and-commit@v9
-      with:
-          author_name: Warhammer4000
-          author_email: tazimtazim2012@gmail.com
-          message: 'fix: Samples => Samples~'
-
+   
+    - uses: stefanzweifel/git-auto-commit-action@v5
     
+
     - name: Get Version from package.json
       id: get-version
       run: echo ::set-output name=version::$(jq -r .version ${{ steps.find-package-json.outputs.package-json-path }})
