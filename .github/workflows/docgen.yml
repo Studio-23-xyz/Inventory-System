@@ -27,7 +27,7 @@ jobs:
               cp -r Screenshots .
             fi
 
-      shell: bash
+        shell: bash
       
       - name: Build
         uses: CaseyHofland/docfx-unitypackage@v1
