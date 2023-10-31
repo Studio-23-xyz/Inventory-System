@@ -30,7 +30,7 @@ namespace Studio23.SS2.InventorySystem.Editor
 
             GUILayout.Box(_header, GUILayout.Height(200), GUILayout.ExpandWidth(true));
 
-            _currentTab = GUILayout.Toolbar(_currentTab, new string[] { "Backpack Wizard", "Hint Wizard" });
+            _currentTab = GUILayout.Toolbar(_currentTab, new string[] { "Backpack Wizard" });
 
             EditorGUILayout.BeginVertical(EditorStyles.helpBox);
 

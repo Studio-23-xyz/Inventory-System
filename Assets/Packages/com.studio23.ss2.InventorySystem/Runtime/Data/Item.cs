@@ -7,6 +7,7 @@ namespace Studio23.SS2.InventorySystem.Data
     [Serializable]
     public class Item : ItemBase
     {
-       public Sprite Icon;
+        public Sprite Icon;
     }
+
 }

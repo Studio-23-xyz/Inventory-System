@@ -1,5 +1,15 @@
 # Changelog
 
+## [v1.2.0] - 2023-10-27
+
+### Updated
+
++  Moved Some data classes to samples
++  Now Inventory Base Fires Event on item add and remove
+
+
+
+
 ## [v1.1.1] - 2023-10-27
 
 ### Added

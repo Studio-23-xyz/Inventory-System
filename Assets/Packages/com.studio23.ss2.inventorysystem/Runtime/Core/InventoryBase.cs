@@ -19,6 +19,11 @@ namespace Studio23.SS2.InventorySystem.Core
         public readonly string Inventoryname;
         internal string ItemsDirectory => Path.Combine(Application.persistentDataPath, SaveDirectory);
 
+        public delegate void InventoryItemEvent(T item);
+
+        public InventoryItemEvent OnItemAdded;
+        public InventoryItemEvent OnItemRemoved;
+
         public InventoryBase(string inventoryName)
         {
             Inventoryname = inventoryName;
@@ -28,6 +33,7 @@ namespace Studio23.SS2.InventorySystem.Core
         public bool AddItem(T item)
         {
             _items.Add(item);
+            OnItemAdded?.Invoke(item);
             return true;
         }
 
@@ -35,6 +41,7 @@ namespace Studio23.SS2.InventorySystem.Core
         {
             if (!HasItem(item)) return false;
             _items.Remove(item);
+            OnItemRemoved?.Invoke(item);
             return true;
         }
 

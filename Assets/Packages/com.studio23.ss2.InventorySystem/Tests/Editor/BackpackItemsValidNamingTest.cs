@@ -6,7 +6,7 @@ using Studio23.SS2.InventorySystem.Data;
 
 public class BackpackItemsValidNamingTest
 {
-    private static IEnumerable<Item> _allItems => Resources.LoadAll<Item>("Inventory System/Backpack Items").ToList();
+    private static IEnumerable<Item> _allItems => Resources.LoadAll<Item>("Inventory System/Backpack").ToList();
 
     [TestCaseSource(nameof(_allItems))]
     public void ValidNamingCase(Item item)
