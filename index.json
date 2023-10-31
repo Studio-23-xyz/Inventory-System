@@ -12,7 +12,7 @@
   "api/Global.Hint.html": {
     "href": "api/Global.Hint.html",
     "title": "Class Hint | |",
-    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description"
+    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Summary public string Summary Field Value string"
   },
   "api/Global.InventoryManager.html": {
     "href": "api/Global.InventoryManager.html",
@@ -34,15 +34,20 @@
     "title": "Namespace | |",
     "keywords": "Namespace Classes BackpackFunctionalityTest BackpackItemsValidNamingTest Hint InventoryManager RandomEnumerableGenerator RandomListGenerator"
   },
+  "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html",
+    "title": "Delegate InventoryBase<T>.InventoryItemEvent | |",
+    "keywords": "Delegate InventoryBase<T>.InventoryItemEvent Namespace Studio23.SS2.InventorySystem.Core public delegate void InventoryBase<T>.InventoryItemEvent(T item) Parameters item T"
+  },
   "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html",
     "title": "Class InventoryBase<T> | |",
-    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields Inventoryname public readonly string Inventoryname Field Value string SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
+    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields InventoryName public readonly string InventoryName Field Value string OnItemAdded public InventoryBase<T>.InventoryItemEvent OnItemAdded Field Value InventoryBase<T>.InventoryItemEvent OnItemRemoved public InventoryBase<T>.InventoryItemEvent OnItemRemoved Field Value InventoryBase<T>.InventoryItemEvent SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
   },
   "api/Studio23.SS2.InventorySystem.Core.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.html",
     "title": "Namespace Studio23.SS2.InventorySystem.Core | |",
-    "keywords": "Namespace Studio23.SS2.InventorySystem.Core Classes InventoryBase<T> Create New inventories by passing new types of objects. This is the base class."
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Core Classes InventoryBase<T> Create New inventories by passing new types of objects. This is the base class. Delegates InventoryBase<T>.InventoryItemEvent"
   },
   "api/Studio23.SS2.InventorySystem.Data.Item.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.Item.html",
@@ -82,7 +87,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
+    "keywords": "Changelog [v1.2.0] - 2023-10-27 Updated Moved Some data classes to samples Now Inventory Base Fires Event on item add and remove [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
   },
   "index.html": {
     "href": "index.html",
@@ -97,6 +102,6 @@
   "manual/index.html": {
     "href": "manual/index.html",
     "title": "Inventory System | |",
-    "keywords": "Inventory System Inventory System is a boilerplate library for implementing Inventory needs for your game. Table of Contents Installation Usage Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/Inventory-System.git#upm Usage Using Inventory System Access the Inventory System Wizard from top toolbar Studio-23 > Inventory System > Wizard Create new items by manually putting names and icons Or Bulk Create Get the csv template using the get template button. Create the icons folder and put all the icons in there. in the template name the icons with their items Press Generate"
+    "keywords": "Inventory System Inventory System is a boilerplate library for implementing Inventory needs for your game. Table of Contents Installation Usage Installation Install via Git URL You can also use the \"Install from Git URL\" option from Unity Package Manager to install the package. https://github.com/Studio-23-xyz/Inventory-System.git#upm Usage Using Inventory System Access the Inventory System Wizard from top toolbar Studio-23 > Inventory System > Wizard Create new items by manually putting names and icons Or Bulk Create Get the csv template using the get template button. Create the icons folder and put all the icons in there. in the template name the icons with their items Press Generate Customization You can just create your own type of Inventory Item. Just inherit from ItemBase and pass it InventoryBase as type. You should take a look at the samples for an example."
   }
 }

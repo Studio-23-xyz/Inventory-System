@@ -85,6 +85,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.yml",
       "output": {
         ".html": {

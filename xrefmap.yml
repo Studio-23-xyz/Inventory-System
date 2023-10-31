@@ -126,6 +126,12 @@ references:
   commentId: T:Global.Hint
   fullName: Hint
   nameWithType: Hint
+- uid: Global.Hint.Summary
+  name: Summary
+  href: api/Global.Hint.html#Global_Hint_Summary
+  commentId: F:Global.Hint.Summary
+  fullName: Hint.Summary
+  nameWithType: Hint.Summary
 - uid: Global.InventoryManager
   name: InventoryManager
   href: api/Global.InventoryManager.html
@@ -273,14 +279,23 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).HasItem
   nameWithType: InventoryBase<T>.HasItem
   nameWithType.vb: InventoryBase(Of T).HasItem
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.Inventoryname
-  name: Inventoryname
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_Inventoryname
-  commentId: F:Studio23.SS2.InventorySystem.Core.InventoryBase`1.Inventoryname
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.Inventoryname
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).Inventoryname
-  nameWithType: InventoryBase<T>.Inventoryname
-  nameWithType.vb: InventoryBase(Of T).Inventoryname
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.InventoryItemEvent
+  name: InventoryBase<T>.InventoryItemEvent
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html
+  commentId: T:Studio23.SS2.InventorySystem.Core.InventoryBase`1.InventoryItemEvent
+  name.vb: InventoryBase(Of T).InventoryItemEvent
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.InventoryItemEvent
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).InventoryItemEvent
+  nameWithType: InventoryBase<T>.InventoryItemEvent
+  nameWithType.vb: InventoryBase(Of T).InventoryItemEvent
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.InventoryName
+  name: InventoryName
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_InventoryName
+  commentId: F:Studio23.SS2.InventorySystem.Core.InventoryBase`1.InventoryName
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.InventoryName
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).InventoryName
+  nameWithType: InventoryBase<T>.InventoryName
+  nameWithType.vb: InventoryBase(Of T).InventoryName
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventory(System.Boolean,System.String,System.String)
   name: LoadInventory(bool, string, string)
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventory_System_Boolean_System_String_System_String_
@@ -299,6 +314,22 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventory
   nameWithType: InventoryBase<T>.LoadInventory
   nameWithType.vb: InventoryBase(Of T).LoadInventory
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemAdded
+  name: OnItemAdded
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemAdded
+  commentId: F:Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemAdded
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.OnItemAdded
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).OnItemAdded
+  nameWithType: InventoryBase<T>.OnItemAdded
+  nameWithType.vb: InventoryBase(Of T).OnItemAdded
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemRemoved
+  name: OnItemRemoved
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemRemoved
+  commentId: F:Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemRemoved
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.OnItemRemoved
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).OnItemRemoved
+  nameWithType: InventoryBase<T>.OnItemRemoved
+  nameWithType.vb: InventoryBase(Of T).OnItemRemoved
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.RemoveItem(`0)
   name: RemoveItem(T)
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_RemoveItem__0_
