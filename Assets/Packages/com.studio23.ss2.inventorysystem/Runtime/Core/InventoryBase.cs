@@ -16,7 +16,7 @@ namespace Studio23.SS2.InventorySystem.Core
     {
         [SerializeField] private List<T> _items;
         public string SaveDirectory = "Inventory";
-        public readonly string Inventoryname;
+        public readonly string InventoryName;
         internal string ItemsDirectory => Path.Combine(Application.persistentDataPath, SaveDirectory);
 
         public delegate void InventoryItemEvent(T item);
@@ -26,7 +26,7 @@ namespace Studio23.SS2.InventorySystem.Core
 
         public InventoryBase(string inventoryName)
         {
-            Inventoryname = inventoryName;
+            InventoryName = inventoryName;
             _items = new List<T>();
         }
 
