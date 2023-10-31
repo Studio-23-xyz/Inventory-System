@@ -84,7 +84,7 @@ public class BackpackFunctionalityTest
         }
         string itemListToBeSaved = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
 
-        string path = Path.Combine(Backpack.ItemsDirectory, $"{Backpack.Inventoryname}.tm");
+        string path = Path.Combine(Backpack.ItemsDirectory, $"{Backpack.InventoryName}.tm");
 
         string itemListFromFile = await File.ReadAllTextAsync(path);
 

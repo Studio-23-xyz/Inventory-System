@@ -32,4 +32,9 @@ https://github.com/Studio-23-xyz/Inventory-System.git#upm
 6. Press Generate
 
 
+### Customization
 
+You can just create your own type of Inventory Item.
+
+1. Just inherit from ItemBase and pass it InventoryBase as type.
+2. You should take a look at the samples for an example.

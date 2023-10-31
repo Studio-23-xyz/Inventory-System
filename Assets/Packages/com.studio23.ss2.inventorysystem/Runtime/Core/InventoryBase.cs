@@ -16,18 +16,24 @@ namespace Studio23.SS2.InventorySystem.Core
     {
         [SerializeField] private List<T> _items;
         public string SaveDirectory = "Inventory";
-        public readonly string Inventoryname;
+        public readonly string InventoryName;
         internal string ItemsDirectory => Path.Combine(Application.persistentDataPath, SaveDirectory);
+
+        public delegate void InventoryItemEvent(T item);
+
+        public InventoryItemEvent OnItemAdded;
+        public InventoryItemEvent OnItemRemoved;
 
         public InventoryBase(string inventoryName)
         {
-            Inventoryname = inventoryName;
+            InventoryName = inventoryName;
             _items = new List<T>();
         }
 
         public bool AddItem(T item)
         {
             _items.Add(item);
+            OnItemAdded?.Invoke(item);
             return true;
         }
 
@@ -35,6 +41,7 @@ namespace Studio23.SS2.InventorySystem.Core
         {
             if (!HasItem(item)) return false;
             _items.Remove(item);
+            OnItemRemoved?.Invoke(item);
             return true;
         }
 
@@ -62,7 +69,7 @@ namespace Studio23.SS2.InventorySystem.Core
                 itemNames.Add(item.Name);
             }
 
-            await SaveSystem.Core.SaveSystem.Instance.SaveData(itemNames, Inventoryname, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
+            await SaveSystem.Core.SaveSystem.Instance.SaveData(itemNames, InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
 
 
 
@@ -79,12 +86,12 @@ namespace Studio23.SS2.InventorySystem.Core
         public async UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
         {
 
-            List<string> itemNames = await SaveSystem.Core.SaveSystem.Instance.LoadData<List<string>>(Inventoryname, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
+            List<string> itemNames = await SaveSystem.Core.SaveSystem.Instance.LoadData<List<string>>(InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
 
             _items.Clear();
             foreach (var itemName in itemNames)
             {
-                T item = Resources.Load<T>($"Inventory System/{Inventoryname}/{itemName}");
+                T item = Resources.Load<T>($"Inventory System/{InventoryName}/{itemName}");
                 _items.Add(item);
             }
         }
