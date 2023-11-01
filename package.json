@@ -1,0 +1,44 @@
+{
+    "name": "com.studio23.ss2.inventorysystem",
+    "version": "1.2.3",
+    "displayName": "Inventory System",
+    "description": "This is a boilerplate code for implementing inventory systems in unity games",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://studio-23-xyz.github.io/Inventory-System/manual/",
+    "changelogUrl": "https://studio-23-xyz.github.io/Inventory-System/changelog/CHANGELOG.html",
+    "licensesUrl": "https://studio-23-xyz.github.io/Inventory-System/license/LICENSE.html",
+    "scopedRegistries": [
+        {
+            "name": "Studio 23",
+            "url": "https://package.openupm.com",
+            "scopes": [
+                "com.studio23.ss2"
+            ]
+        }
+    ],
+    "dependencies": {
+        "com.studio23.ss2.savesystem": "1.1.6",
+        "com.cysharp.unitask" : "2.4.1"
+    },
+    "keywords": [
+        "Inventory",
+        "System"
+    ],
+    "samples": [
+        {
+            "displayName": "Demo",
+            "description": "A small sample to demonstrate the abilities of the package.",
+            "path": "Samples~/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Studio-23-xyz/Inventory-System.git"
+    },
+    "author": {
+        "name": "Studio 23",
+        "email": "contact@studio-23.xyz",
+        "url": "https://studio-23.xyz"
+    }
+}
