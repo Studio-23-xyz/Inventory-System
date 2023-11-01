@@ -12,7 +12,12 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-
+   
+    - name: Set Git Identity
+      run: |
+       git config --global user.email "tazimtazim2012@gmail.com"
+       git config --global user.name "warhammer4000"
+    
     - name: Find package.json
       id: find-package-json
       run: echo ::set-output name=package-json-path::$(find . -name "package.json" | head -n 1)
