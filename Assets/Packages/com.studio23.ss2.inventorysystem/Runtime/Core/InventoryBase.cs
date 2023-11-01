@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[assembly: InternalsVisibleTo("com.studio23.ss2.inventorysystem.Tests")]
+[assembly: InternalsVisibleTo("com.studio23.ss2.inventorysystem.playmodetests")]
 namespace Studio23.SS2.InventorySystem.Core
 {
     /// <summary>

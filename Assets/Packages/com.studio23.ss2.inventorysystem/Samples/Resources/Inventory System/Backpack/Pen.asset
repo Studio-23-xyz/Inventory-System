@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1bbb2e4079d7b46b22aa7dfce2df34, type: 3}
-  m_Name: Rusty Key
+  m_Script: {fileID: 11500000, guid: 8d3b3a1665ebf2340b2ea4ee1093f0bd, type: 3}
+  m_Name: Pen
   m_EditorClassIdentifier: 
-  Id: 123
-  Name: Rusty Key
-  Description: A Rusty Key that opens something?
-  Icon: {fileID: 21300000, guid: 8f5497b6bb13d0c4b84ba333e70c8d4b, type: 3}
+  Id: 126
+  Name: Pen
+  Description: Just a normal pen
+  Icon: {fileID: 0}

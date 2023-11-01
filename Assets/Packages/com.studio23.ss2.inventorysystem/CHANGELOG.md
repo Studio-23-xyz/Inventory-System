@@ -1,5 +1,10 @@
 # Changelog
 
+## [v1.2.3] - 2023-11-1
+
+### Updated
+
++  Fixed folder strucutre in the main branch
 
 ## [v1.2.1] - 2023-11-1
 
