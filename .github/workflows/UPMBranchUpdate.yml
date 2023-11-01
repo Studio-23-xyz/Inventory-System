@@ -40,6 +40,7 @@ jobs:
 
     - name: Push Branch and Tags
       run: |
+        git checkout upm
         if [[ -d "Samples" ]]; then
           git mv Samples Samples~
           rm -f Samples.meta
