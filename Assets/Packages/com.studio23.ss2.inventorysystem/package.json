@@ -29,7 +29,7 @@
         {
             "displayName": "Demo",
             "description": "A small sample to demonstrate the abilities of the package.",
-            "path": "Samples/Demo"
+            "path": "Samples~/Demo"
         }
     ],
     "repository": {
