@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.inventorysystem",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "displayName": "Inventory System",
     "description": "This is a boilerplate code for implementing inventory systems in unity games",
     "unity": "2022.3",
