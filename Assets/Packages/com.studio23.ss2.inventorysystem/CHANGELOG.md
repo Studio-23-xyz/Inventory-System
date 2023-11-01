@@ -1,5 +1,13 @@
 # Changelog
 
+
+## [v1.2.1] - 2023-11-1
+
+### Updated
+
++  Added Demo samples
++  Changed dependency
+
 ## [v1.2.0] - 2023-10-27
 
 ### Updated
