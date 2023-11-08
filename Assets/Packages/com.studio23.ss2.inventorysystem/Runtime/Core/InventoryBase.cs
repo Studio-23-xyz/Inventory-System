@@ -45,6 +45,16 @@ namespace Studio23.SS2.InventorySystem.Core
             return true;
         }
 
+        public bool AddItemUnique(T item)
+        {
+            if(_items.Contains(item)) 
+                return false;
+
+            _items.Add(item);
+            OnItemAdded?.Invoke(item);
+            return true;
+        }
+
         public bool HasItem(T item)
         {
             return _items.Contains(item);
@@ -59,20 +69,24 @@ namespace Studio23.SS2.InventorySystem.Core
         /// <param name="encryptionKey"></param>
         /// <param name="encryptionIV"></param>
         /// <returns></returns>
-        public async UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
+        public virtual async UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
         {
+            List<ItemSaveData> savedItemsData = CreateSaveData();
 
-            List<string> itemNames = new List<string>();
+            await SaveSystem.Core.SaveSystem.Instance.SaveData(savedItemsData, InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
+        }
+
+        internal List<ItemSaveData> CreateSaveData()
+        {
+            List<ItemSaveData> savedItemsData = new List<ItemSaveData>();
 
             foreach (var item in _items)
             {
-                itemNames.Add(item.Name);
+                var itemSaveData = new ItemSaveData(item.name, item.GetSerializedData());
+                savedItemsData.Add(itemSaveData);
             }
 
-            await SaveSystem.Core.SaveSystem.Instance.SaveData(itemNames, InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
-
-
-
+            return savedItemsData;
         }
 
 
@@ -83,15 +97,19 @@ namespace Studio23.SS2.InventorySystem.Core
         /// <param name="encryptionKey"></param>
         /// <param name="encryptionIV"></param>
         /// <returns></returns>
-        public async UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
+        public virtual async UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
         {
-
-            List<string> itemNames = await SaveSystem.Core.SaveSystem.Instance.LoadData<List<string>>(InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
+            List<ItemSaveData> loadedItemDatas = await SaveSystem.Core.SaveSystem.Instance.LoadData<List<ItemSaveData>>(
+                    InventoryName, ItemsDirectory,
+                    ".tm",
+                    enableEncryption, encryptionKey, encryptionIV
+                );
 
             _items.Clear();
-            foreach (var itemName in itemNames)
+            foreach (var loadedItemData in loadedItemDatas)
             {
-                T item = Resources.Load<T>($"Inventory System/{InventoryName}/{itemName}");
+                T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+                item.AssignSerializedData(loadedItemData.ItemData);
                 _items.Add(item);
             }
         }

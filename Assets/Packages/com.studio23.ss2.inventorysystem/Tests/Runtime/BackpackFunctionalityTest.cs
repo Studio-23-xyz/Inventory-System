@@ -60,12 +60,9 @@ public class BackpackFunctionalityTest
         await Backpack.SaveInventory(false);
 
         // Act
-        List<string> itemNames = new List<string>();
-        foreach (var item in _randomSubList)
-        {
-            itemNames.Add(item.Name);
-        }
-        string itemListToBeSaved = JsonConvert.SerializeObject(itemNames, Formatting.Indented);
+        var saveData = Backpack.CreateSaveData();
+
+        string itemListToBeSaved = JsonConvert.SerializeObject(saveData, Formatting.Indented);
 
         string path = Path.Combine(Backpack.ItemsDirectory, $"{Backpack.InventoryName}.tm");
 
