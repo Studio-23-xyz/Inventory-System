@@ -5,4 +5,13 @@ using UnityEngine;
 public class Hint : ItemBase
 {
     public string Summary;
+    public override void AssignSerializedData(string data)
+    {
+        
+    }
+
+    public override string GetSerializedData()
+    {
+        return "";
+    }
 }

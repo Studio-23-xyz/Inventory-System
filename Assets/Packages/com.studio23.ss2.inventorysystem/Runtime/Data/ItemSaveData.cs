@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Studio23.SS2.InventorySystem.Core
+namespace Studio23.SS2.InventorySystem.Data
 {
     /// <summary>
     /// Stores data per Itembase
