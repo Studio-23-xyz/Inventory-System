@@ -8,6 +8,15 @@ namespace Studio23.SS2.InventorySystem.Data
     public class Item : ItemBase
     {
         public Sprite Icon;
+        public override void AssignSerializedData(string data)
+        {
+            
+        }
+
+        public override string GetSerializedData()
+        {
+            return "";
+        }
     }
 
 }
