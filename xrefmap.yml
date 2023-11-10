@@ -126,6 +126,35 @@ references:
   commentId: T:Global.Hint
   fullName: Hint
   nameWithType: Hint
+- uid: Global.Hint.AssignSerializedData(System.String)
+  name: AssignSerializedData(string)
+  href: api/Global.Hint.html#Global_Hint_AssignSerializedData_System_String_
+  commentId: M:Global.Hint.AssignSerializedData(System.String)
+  name.vb: AssignSerializedData(String)
+  fullName: Hint.AssignSerializedData(string)
+  fullName.vb: Hint.AssignSerializedData(String)
+  nameWithType: Hint.AssignSerializedData(string)
+  nameWithType.vb: Hint.AssignSerializedData(String)
+- uid: Global.Hint.AssignSerializedData*
+  name: AssignSerializedData
+  href: api/Global.Hint.html#Global_Hint_AssignSerializedData_
+  commentId: Overload:Global.Hint.AssignSerializedData
+  isSpec: "True"
+  fullName: Hint.AssignSerializedData
+  nameWithType: Hint.AssignSerializedData
+- uid: Global.Hint.GetSerializedData
+  name: GetSerializedData()
+  href: api/Global.Hint.html#Global_Hint_GetSerializedData
+  commentId: M:Global.Hint.GetSerializedData
+  fullName: Hint.GetSerializedData()
+  nameWithType: Hint.GetSerializedData()
+- uid: Global.Hint.GetSerializedData*
+  name: GetSerializedData
+  href: api/Global.Hint.html#Global_Hint_GetSerializedData_
+  commentId: Overload:Global.Hint.GetSerializedData
+  isSpec: "True"
+  fullName: Hint.GetSerializedData
+  nameWithType: Hint.GetSerializedData
 - uid: Global.Hint.Summary
   name: Summary
   href: api/Global.Hint.html#Global_Hint_Summary
@@ -245,6 +274,23 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).AddItem
   nameWithType: InventoryBase<T>.AddItem
   nameWithType.vb: InventoryBase(Of T).AddItem
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItemUnique(`0)
+  name: AddItemUnique(T)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_AddItemUnique__0_
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItemUnique(`0)
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.AddItemUnique(T)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).AddItemUnique(T)
+  nameWithType: InventoryBase<T>.AddItemUnique(T)
+  nameWithType.vb: InventoryBase(Of T).AddItemUnique(T)
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItemUnique*
+  name: AddItemUnique
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_AddItemUnique_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItemUnique
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.AddItemUnique
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).AddItemUnique
+  nameWithType: InventoryBase<T>.AddItemUnique
+  nameWithType.vb: InventoryBase(Of T).AddItemUnique
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetAll
   name: GetAll()
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetAll
@@ -385,6 +431,35 @@ references:
   commentId: T:Studio23.SS2.InventorySystem.Data.Item
   fullName: Studio23.SS2.InventorySystem.Data.Item
   nameWithType: Item
+- uid: Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData(System.String)
+  name: AssignSerializedData(string)
+  href: api/Studio23.SS2.InventorySystem.Data.Item.html#Studio23_SS2_InventorySystem_Data_Item_AssignSerializedData_System_String_
+  commentId: M:Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData(System.String)
+  name.vb: AssignSerializedData(String)
+  fullName: Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData(string)
+  fullName.vb: Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData(String)
+  nameWithType: Item.AssignSerializedData(string)
+  nameWithType.vb: Item.AssignSerializedData(String)
+- uid: Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData*
+  name: AssignSerializedData
+  href: api/Studio23.SS2.InventorySystem.Data.Item.html#Studio23_SS2_InventorySystem_Data_Item_AssignSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Data.Item.AssignSerializedData
+  nameWithType: Item.AssignSerializedData
+- uid: Studio23.SS2.InventorySystem.Data.Item.GetSerializedData
+  name: GetSerializedData()
+  href: api/Studio23.SS2.InventorySystem.Data.Item.html#Studio23_SS2_InventorySystem_Data_Item_GetSerializedData
+  commentId: M:Studio23.SS2.InventorySystem.Data.Item.GetSerializedData
+  fullName: Studio23.SS2.InventorySystem.Data.Item.GetSerializedData()
+  nameWithType: Item.GetSerializedData()
+- uid: Studio23.SS2.InventorySystem.Data.Item.GetSerializedData*
+  name: GetSerializedData
+  href: api/Studio23.SS2.InventorySystem.Data.Item.html#Studio23_SS2_InventorySystem_Data_Item_GetSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Data.Item.GetSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Data.Item.GetSerializedData
+  nameWithType: Item.GetSerializedData
 - uid: Studio23.SS2.InventorySystem.Data.Item.Icon
   name: Icon
   href: api/Studio23.SS2.InventorySystem.Data.Item.html#Studio23_SS2_InventorySystem_Data_Item_Icon
@@ -397,12 +472,41 @@ references:
   commentId: T:Studio23.SS2.InventorySystem.Data.ItemBase
   fullName: Studio23.SS2.InventorySystem.Data.ItemBase
   nameWithType: ItemBase
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData(System.String)
+  name: AssignSerializedData(string)
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_AssignSerializedData_System_String_
+  commentId: M:Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData(System.String)
+  name.vb: AssignSerializedData(String)
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData(string)
+  fullName.vb: Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData(String)
+  nameWithType: ItemBase.AssignSerializedData(string)
+  nameWithType.vb: ItemBase.AssignSerializedData(String)
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData*
+  name: AssignSerializedData
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_AssignSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.AssignSerializedData
+  nameWithType: ItemBase.AssignSerializedData
 - uid: Studio23.SS2.InventorySystem.Data.ItemBase.Description
   name: Description
   href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_Description
   commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.Description
   fullName: Studio23.SS2.InventorySystem.Data.ItemBase.Description
   nameWithType: ItemBase.Description
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData
+  name: GetSerializedData()
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_GetSerializedData
+  commentId: M:Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData()
+  nameWithType: ItemBase.GetSerializedData()
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData*
+  name: GetSerializedData
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_GetSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData
+  nameWithType: ItemBase.GetSerializedData
 - uid: Studio23.SS2.InventorySystem.Data.ItemBase.Id
   name: Id
   href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_Id
@@ -415,6 +519,43 @@ references:
   commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.Name
   fullName: Studio23.SS2.InventorySystem.Data.ItemBase.Name
   nameWithType: ItemBase.Name
+- uid: Studio23.SS2.InventorySystem.Data.ItemSaveData
+  name: ItemSaveData
+  href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html
+  commentId: T:Studio23.SS2.InventorySystem.Data.ItemSaveData
+  fullName: Studio23.SS2.InventorySystem.Data.ItemSaveData
+  nameWithType: ItemSaveData
+- uid: Studio23.SS2.InventorySystem.Data.ItemSaveData.#ctor(System.String,System.String)
+  name: ItemSaveData(string, string)
+  href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html#Studio23_SS2_InventorySystem_Data_ItemSaveData__ctor_System_String_System_String_
+  commentId: M:Studio23.SS2.InventorySystem.Data.ItemSaveData.#ctor(System.String,System.String)
+  name.vb: New(String, String)
+  fullName: Studio23.SS2.InventorySystem.Data.ItemSaveData.ItemSaveData(string, string)
+  fullName.vb: Studio23.SS2.InventorySystem.Data.ItemSaveData.New(String, String)
+  nameWithType: ItemSaveData.ItemSaveData(string, string)
+  nameWithType.vb: ItemSaveData.New(String, String)
+- uid: Studio23.SS2.InventorySystem.Data.ItemSaveData.#ctor*
+  name: ItemSaveData
+  href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html#Studio23_SS2_InventorySystem_Data_ItemSaveData__ctor_
+  commentId: Overload:Studio23.SS2.InventorySystem.Data.ItemSaveData.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: Studio23.SS2.InventorySystem.Data.ItemSaveData.ItemSaveData
+  fullName.vb: Studio23.SS2.InventorySystem.Data.ItemSaveData.New
+  nameWithType: ItemSaveData.ItemSaveData
+  nameWithType.vb: ItemSaveData.New
+- uid: Studio23.SS2.InventorySystem.Data.ItemSaveData.ItemData
+  name: ItemData
+  href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html#Studio23_SS2_InventorySystem_Data_ItemSaveData_ItemData
+  commentId: F:Studio23.SS2.InventorySystem.Data.ItemSaveData.ItemData
+  fullName: Studio23.SS2.InventorySystem.Data.ItemSaveData.ItemData
+  nameWithType: ItemSaveData.ItemData
+- uid: Studio23.SS2.InventorySystem.Data.ItemSaveData.SOName
+  name: SOName
+  href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html#Studio23_SS2_InventorySystem_Data_ItemSaveData_SOName
+  commentId: F:Studio23.SS2.InventorySystem.Data.ItemSaveData.SOName
+  fullName: Studio23.SS2.InventorySystem.Data.ItemSaveData.SOName
+  nameWithType: ItemSaveData.SOName
 - uid: Studio23.SS2.InventorySystem.Editor
   name: Studio23.SS2.InventorySystem.Editor
   href: api/Studio23.SS2.InventorySystem.Editor.html

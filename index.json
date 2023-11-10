@@ -12,7 +12,7 @@
   "api/Global.Hint.html": {
     "href": "api/Global.Hint.html",
     "title": "Class Hint | |",
-    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Summary public string Summary Field Value string"
+    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Summary public string Summary Field Value string Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
   },
   "api/Global.InventoryManager.html": {
     "href": "api/Global.InventoryManager.html",
@@ -42,7 +42,7 @@
   "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html",
     "title": "Class InventoryBase<T> | |",
-    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields InventoryName public readonly string InventoryName Field Value string OnItemAdded public InventoryBase<T>.InventoryItemEvent OnItemAdded Field Value InventoryBase<T>.InventoryItemEvent OnItemRemoved public InventoryBase<T>.InventoryItemEvent OnItemRemoved Field Value InventoryBase<T>.InventoryItemEvent SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
+    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields InventoryName public readonly string InventoryName Field Value string OnItemAdded public InventoryBase<T>.InventoryItemEvent OnItemAdded Field Value InventoryBase<T>.InventoryItemEvent OnItemRemoved public InventoryBase<T>.InventoryItemEvent OnItemRemoved Field Value InventoryBase<T>.InventoryItemEvent SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool AddItemUnique(T) public bool AddItemUnique(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public virtual UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public virtual UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
   },
   "api/Studio23.SS2.InventorySystem.Core.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.html",
@@ -52,17 +52,22 @@
   "api/Studio23.SS2.InventorySystem.Data.Item.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.Item.html",
     "title": "Class Item | |",
-    "keywords": "Class Item Namespace Studio23.SS2.InventorySystem.Data [Serializable] public class Item : ItemBase Inheritance object ItemBase Item Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Icon public Sprite Icon Field Value Sprite"
+    "keywords": "Class Item Namespace Studio23.SS2.InventorySystem.Data [Serializable] public class Item : ItemBase Inheritance object ItemBase Item Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Icon public Sprite Icon Field Value Sprite Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
   },
   "api/Studio23.SS2.InventorySystem.Data.ItemBase.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.ItemBase.html",
     "title": "Class ItemBase | |",
-    "keywords": "Class ItemBase Namespace Studio23.SS2.InventorySystem.Data public class ItemBase : ScriptableObject Inheritance object ItemBase Derived Hint Item Fields Description public string Description Field Value string Id public string Id Field Value string Name public string Name Field Value string"
+    "keywords": "Class ItemBase Namespace Studio23.SS2.InventorySystem.Data public abstract class ItemBase : ScriptableObject Inheritance object ItemBase Derived Hint Item Fields Description public string Description Field Value string Id public string Id Field Value string Name public string Name Field Value string Methods AssignSerializedData(string) public abstract void AssignSerializedData(string data) Parameters data string GetSerializedData() public abstract string GetSerializedData() Returns string"
+  },
+  "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html",
+    "title": "Class ItemSaveData | |",
+    "keywords": "Class ItemSaveData Namespace Studio23.SS2.InventorySystem.Data Stores data per Itembase [Serializable] public class ItemSaveData Inheritance object ItemSaveData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ItemSaveData(string, string) public ItemSaveData(string SOName, string ItemData) Parameters SOName string ItemData string Fields ItemData The saved data for an Item's internal state public string ItemData Field Value string SOName the item SO's asset name public string SOName Field Value string"
   },
   "api/Studio23.SS2.InventorySystem.Data.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.html",
     "title": "Namespace Studio23.SS2.InventorySystem.Data | |",
-    "keywords": "Namespace Studio23.SS2.InventorySystem.Data Classes Item ItemBase"
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Data Classes Item ItemBase ItemSaveData Stores data per Itembase"
   },
   "api/Studio23.SS2.InventorySystem.Editor.BackpackEditorWindow.html": {
     "href": "api/Studio23.SS2.InventorySystem.Editor.BackpackEditorWindow.html",
