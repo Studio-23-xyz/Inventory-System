@@ -106,9 +106,21 @@ namespace Studio23.SS2.InventorySystem.Core
                 );
 
             _items.Clear();
+
+            if(loadedItemDatas == null )
+            {
+                Debug.LogWarning($"No inventory file found for {InventoryName}, Save Inventory First");
+                return;
+            }
+
             foreach (var loadedItemData in loadedItemDatas)
             {
                 T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+                if(item == null)
+                {
+                    Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
+                    continue;
+                }
                 item.AssignSerializedData(loadedItemData.ItemData);
                 _items.Add(item);
             }
