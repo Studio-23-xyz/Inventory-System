@@ -116,6 +116,11 @@ namespace Studio23.SS2.InventorySystem.Core
             foreach (var loadedItemData in loadedItemDatas)
             {
                 T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+                if(item == null)
+                {
+                    Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
+                    continue;
+                }
                 item.AssignSerializedData(loadedItemData.ItemData);
                 _items.Add(item);
             }
