@@ -36,9 +36,7 @@ public class BackpackFunctionalityTest
         }
     }
 
-   
-
-    
+  
 
     [UnityTest, Order(1), Repeat(3)]
     public IEnumerator HasItem()
