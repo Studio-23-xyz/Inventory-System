@@ -11,7 +11,7 @@ namespace Studio23.SS2.InventorySystem.Editor
         private BackpackEditorWindow _backPackWizard;
 
 
-        private Texture _header;
+        //private Texture _header;
 
         [MenuItem("Studio-23/Inventory System/Wizard")]
         public static void ShowWindow()
@@ -22,13 +22,13 @@ namespace Studio23.SS2.InventorySystem.Editor
         private void OnEnable()
         {
             _backPackWizard = new BackpackEditorWindow();
-            _header = Resources.Load<Texture>("InventorySystemheader");
+            //_header = Resources.Load<Texture>("InventorySystemheader");
         }
 
         private void OnGUI()
         {
 
-            GUILayout.Box(_header, GUILayout.Height(200), GUILayout.ExpandWidth(true));
+            //GUILayout.Box(_header, GUILayout.Height(200), GUILayout.ExpandWidth(true));
 
             _currentTab = GUILayout.Toolbar(_currentTab, new string[] { "Backpack Wizard" });
 
