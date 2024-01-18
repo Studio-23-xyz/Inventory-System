@@ -1,5 +1,14 @@
 # Changelog
 
+
+## [v2.0.0] - 2024-01-17
+
+### Updated
+
++  Removed dependency from savesystem
++  Now Inventory base do not need any async method.
+
+
 ## [v1.3.1] - 2023-11-20
 
 ### Updated

@@ -1,12 +1,9 @@
-using Cysharp.Threading.Tasks;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using Studio23.SS2.InventorySystem.Core;
 using Studio23.SS2.InventorySystem.Data;
-using Studio23.SS2.SaveSystem.Core;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
+
 using System.Linq;
 using UnityEngine;
 using UnityEngine.TestTools;
@@ -24,7 +21,6 @@ public class BackpackFunctionalityTest
     public void Init()
     {
         GameObject testObject = new GameObject();
-        testObject.AddComponent<SaveSystem>();
         Backpack = new InventoryBase<Item>("Backpack");
 
         _allItems = Resources.LoadAll<Item>("Inventory System/Backpack").ToList();
@@ -50,60 +46,9 @@ public class BackpackFunctionalityTest
         yield return null;
     }
 
-    [UnityTest, Order(2)]
-    public IEnumerator SaveInventory_NO_Encryption() => UniTask.ToCoroutine(async () =>
-    {
-
-        // Arrange
-        await Backpack.SaveInventory(false);
-
-        // Act
-        var saveData = Backpack.CreateSaveData();
-
-        string itemListToBeSaved = JsonConvert.SerializeObject(saveData, Formatting.Indented);
-
-        string path = Path.Combine(Backpack.ItemsDirectory, $"{Backpack.InventoryName}.tm");
-
-        string itemListFromFile = await File.ReadAllTextAsync(path);
-
-        // Assert
-        Assert.IsTrue(itemListToBeSaved.Equals(itemListFromFile));
 
 
-    });
-
-
-    [UnityTest, Order(3)]
-    public IEnumerator LoadInventory_NO_Encryption() => UniTask.ToCoroutine(async () =>
-    {
-
-        // Arrange
-        await Backpack.LoadInventory(false);
-
-        // Act
-        List<Item> allItems = Backpack.GetAll();
-
-        // Assert
-        CollectionAssert.AreEqual(_randomSubList, allItems);
-
-    });
-
-
-    [UnityTest, Order(4)]
-    public IEnumerator Encrypted_Save_Load() => UniTask.ToCoroutine(async () =>
-    {
-
-        // Arrange
-        await Backpack.SaveInventory();
-        await Backpack.LoadInventory();
-
-        // Act
-        List<Item> allItems = Backpack.GetAll();
-
-        // Assert
-        CollectionAssert.AreEqual(_randomSubList, allItems);
-
-    });
+   
 
     [UnityTest, Order(10), Repeat(3)]
     public IEnumerator RemoveItem()
@@ -124,12 +69,7 @@ public class BackpackFunctionalityTest
         yield return null;
     }
 
-    [OneTimeTearDown]
-    public void TearDown()
-    {
-        string ItemsDirectory = Backpack.ItemsDirectory;
-        Directory.Delete(ItemsDirectory, true);
-    }
+
 
 
 }

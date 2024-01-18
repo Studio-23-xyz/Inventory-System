@@ -1,7 +1,5 @@
-using Cysharp.Threading.Tasks;
 using Studio23.SS2.InventorySystem.Data;
 using System.Collections.Generic;
-using System.IO;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
@@ -15,9 +13,7 @@ namespace Studio23.SS2.InventorySystem.Core
     public class InventoryBase<T> where T : ItemBase
     {
         [SerializeField] private List<T> _items;
-        public string SaveDirectory = "Inventory";
         public readonly string InventoryName;
-        internal string ItemsDirectory => Path.Combine(Application.persistentDataPath, SaveDirectory);
 
         public delegate void InventoryItemEvent(T item);
 
@@ -34,6 +30,7 @@ namespace Studio23.SS2.InventorySystem.Core
         {
             _items.Add(item);
             OnItemAdded?.Invoke(item);
+            Debug.Log($"{item},Was Added to the Inventory.", item);
             return true;
         }
 
@@ -42,16 +39,16 @@ namespace Studio23.SS2.InventorySystem.Core
             if (!HasItem(item)) return false;
             _items.Remove(item);
             OnItemRemoved?.Invoke(item);
+            Debug.Log($"{item},Was Removed from the Inventory.", item);
             return true;
         }
 
         public bool AddItemUnique(T item)
         {
-            if(_items.Contains(item)) 
+            if (_items.Contains(item))
                 return false;
 
-            _items.Add(item);
-            OnItemAdded?.Invoke(item);
+            AddItem(item);
             return true;
         }
 
@@ -62,21 +59,8 @@ namespace Studio23.SS2.InventorySystem.Core
 
         public List<T> GetAll() => _items;
 
-        /// <summary>
-        /// Saves inventory data using savesystem library
-        /// </summary>
-        /// <param name="enableEncryption"></param>
-        /// <param name="encryptionKey"></param>
-        /// <param name="encryptionIV"></param>
-        /// <returns></returns>
-        public virtual async UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
-        {
-            List<ItemSaveData> savedItemsData = CreateSaveData();
 
-            await SaveSystem.Core.SaveSystem.Instance.SaveData(savedItemsData, InventoryName, ItemsDirectory, ".tm", enableEncryption, encryptionKey, encryptionIV);
-        }
-
-        internal List<ItemSaveData> CreateSaveData()
+        public virtual List<ItemSaveData> GetInventorySaveData()
         {
             List<ItemSaveData> savedItemsData = new List<ItemSaveData>();
 
@@ -89,25 +73,12 @@ namespace Studio23.SS2.InventorySystem.Core
             return savedItemsData;
         }
 
-
-        /// <summary>
-        /// Loads the saved inventory data using savesystem library
-        /// </summary>
-        /// <param name="enableEncryption"></param>
-        /// <param name="encryptionKey"></param>
-        /// <param name="encryptionIV"></param>
-        /// <returns></returns>
-        public virtual async UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = "1234567812345678", string encryptionIV = "1234567876543218")
+        public virtual void LoadInventoryData(List<ItemSaveData> loadedItemDatas)
         {
-            List<ItemSaveData> loadedItemDatas = await SaveSystem.Core.SaveSystem.Instance.LoadData<List<ItemSaveData>>(
-                    InventoryName, ItemsDirectory,
-                    ".tm",
-                    enableEncryption, encryptionKey, encryptionIV
-                );
 
             _items.Clear();
 
-            if(loadedItemDatas == null )
+            if (loadedItemDatas == null)
             {
                 Debug.LogWarning($"No inventory file found for {InventoryName}, Save Inventory First");
                 return;
@@ -116,7 +87,7 @@ namespace Studio23.SS2.InventorySystem.Core
             foreach (var loadedItemData in loadedItemDatas)
             {
                 T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
-                if(item == null)
+                if (item == null)
                 {
                     Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
                     continue;

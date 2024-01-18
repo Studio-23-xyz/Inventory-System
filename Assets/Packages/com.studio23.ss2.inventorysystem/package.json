@@ -1,6 +1,6 @@
 {
     "name": "com.studio23.ss2.inventorysystem",
-    "version": "1.3.2",
+    "version": "2.0.0",
     "displayName": "Inventory System",
     "description": "This is a boilerplate code for implementing inventory systems in unity games",
     "unity": "2022.3",
@@ -17,10 +17,6 @@
             ]
         }
     ],
-    "dependencies": {
-        "com.studio23.ss2.savesystem": "1.2.1",
-        "com.cysharp.unitask" : "2.5.0"
-    },
     "keywords": [
         "Inventory",
         "System"

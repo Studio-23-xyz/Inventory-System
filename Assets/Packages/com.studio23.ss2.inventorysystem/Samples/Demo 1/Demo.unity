@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8dbe80321ea1d14192620044672b939, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HintList:
+  - {fileID: 11400000, guid: fbaf7cb3b63866f44a034b493ed8456c, type: 2}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,6 +261,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1419861358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419861362}
+  - component: {fileID: 1419861361}
+  - component: {fileID: 1419861360}
+  - component: {fileID: 1419861359}
+  m_Layer: 0
+  m_Name: SaveSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1419861359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419861358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89dc61f8c7f31bd408d79ed6e84959ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _selectedSlot:
+    Id: 0
+    Thumbnail: {fileID: 0}
+    Description: 
+    HasBackup: 0
+    fileKeys: []
+  _fileProcessor: {fileID: 1419861360}
+  _archiverBase: {fileID: 11400000, guid: e89be79b4dd6fd744ae866d8ee6661eb, type: 2}
+  _slotConfiguration: {fileID: 11400000, guid: c9496c9385de6fb48930593d279c88ec, type: 2}
+--- !u!114 &1419861360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419861358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eecc332b59a137f4eabcdd69d3b2b196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _encryptor: {fileID: 0}
+--- !u!114 &1419861361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419861358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f129a9f4251deb0419d8650d63f469d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slotProcessor: {fileID: 1419861359}
+--- !u!4 &1419861362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419861358}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1703262463
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,3 +417,4 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 46680876}
   - {fileID: 1703262466}
+  - {fileID: 1419861362}
