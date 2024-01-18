@@ -32,8 +32,6 @@ jobs:
         rm -f Samples.meta
         git commit -am "fix: Samples => Samples~"
         fi
-        git push -f -u origin upm
-        git push --tags
         
     - name: Get Version from package.json
       id: get-version
@@ -43,14 +41,9 @@ jobs:
       if: steps.get-version.outputs.version != ''
       run: git tag v${{ steps.get-version.outputs.version }} upm
 
-    - name: Rename Samples
+    - name: Push Tags
       run: |
         git checkout upm
-        if [[ -d "Samples" ]]; then
-        git mv Samples Samples~
-        rm -f Samples.meta
-        git commit -am "fix: Samples => Samples~"
-        fi
         git push -f -u origin upm
         git push --tags
   
