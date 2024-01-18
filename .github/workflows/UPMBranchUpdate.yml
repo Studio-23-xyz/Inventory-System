@@ -24,7 +24,17 @@ jobs:
     - name: Git Subtree Split
       run: git subtree split -P Assets/Packages/${{ steps.get-package-name.outputs.package-name }}/ -b upm
 
-
+    - name: Rename Samples
+      run: |
+        git checkout upm
+        if [[ -d "Samples" ]]; then
+        git mv Samples Samples~
+        rm -f Samples.meta
+        git commit -am "fix: Samples => Samples~"
+        fi
+        git push -f -u origin upm
+        git push --tags
+        
     - name: Get Version from package.json
       id: get-version
       run: echo ::set-output name=version::$(jq -r .version ${{ steps.find-package-json.outputs.package-json-path }})
@@ -33,7 +43,7 @@ jobs:
       if: steps.get-version.outputs.version != ''
       run: git tag v${{ steps.get-version.outputs.version }} upm
 
-    - name: Push Branch and Tags
+    - name: Rename Samples
       run: |
         git checkout upm
         if [[ -d "Samples" ]]; then
