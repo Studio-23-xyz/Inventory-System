@@ -1,5 +1,3 @@
-using Studio23.SS2.SaveSystem.Interfaces;
-using System;
 using UnityEngine;
 namespace Studio23.SS2.InventorySystem.Data
 {
@@ -8,9 +6,7 @@ namespace Studio23.SS2.InventorySystem.Data
         public string Id;
         public string Name;
         public string Description;
-
         public abstract void AssignSerializedData(string data);
-
         public abstract string GetSerializedData();
     }
 }

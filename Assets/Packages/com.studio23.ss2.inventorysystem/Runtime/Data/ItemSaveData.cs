@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using UnityEngine;
 
 namespace Studio23.SS2.InventorySystem.Data
 {
