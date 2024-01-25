@@ -10,19 +10,6 @@ references:
   commentId: T:Global.BackpackFunctionalityTest
   fullName: BackpackFunctionalityTest
   nameWithType: BackpackFunctionalityTest
-- uid: Global.BackpackFunctionalityTest.Encrypted_Save_Load
-  name: Encrypted_Save_Load()
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_Encrypted_Save_Load
-  commentId: M:Global.BackpackFunctionalityTest.Encrypted_Save_Load
-  fullName: BackpackFunctionalityTest.Encrypted_Save_Load()
-  nameWithType: BackpackFunctionalityTest.Encrypted_Save_Load()
-- uid: Global.BackpackFunctionalityTest.Encrypted_Save_Load*
-  name: Encrypted_Save_Load
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_Encrypted_Save_Load_
-  commentId: Overload:Global.BackpackFunctionalityTest.Encrypted_Save_Load
-  isSpec: "True"
-  fullName: BackpackFunctionalityTest.Encrypted_Save_Load
-  nameWithType: BackpackFunctionalityTest.Encrypted_Save_Load
 - uid: Global.BackpackFunctionalityTest.HasItem
   name: HasItem()
   href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_HasItem
@@ -49,19 +36,6 @@ references:
   isSpec: "True"
   fullName: BackpackFunctionalityTest.Init
   nameWithType: BackpackFunctionalityTest.Init
-- uid: Global.BackpackFunctionalityTest.LoadInventory_NO_Encryption
-  name: LoadInventory_NO_Encryption()
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_LoadInventory_NO_Encryption
-  commentId: M:Global.BackpackFunctionalityTest.LoadInventory_NO_Encryption
-  fullName: BackpackFunctionalityTest.LoadInventory_NO_Encryption()
-  nameWithType: BackpackFunctionalityTest.LoadInventory_NO_Encryption()
-- uid: Global.BackpackFunctionalityTest.LoadInventory_NO_Encryption*
-  name: LoadInventory_NO_Encryption
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_LoadInventory_NO_Encryption_
-  commentId: Overload:Global.BackpackFunctionalityTest.LoadInventory_NO_Encryption
-  isSpec: "True"
-  fullName: BackpackFunctionalityTest.LoadInventory_NO_Encryption
-  nameWithType: BackpackFunctionalityTest.LoadInventory_NO_Encryption
 - uid: Global.BackpackFunctionalityTest.RemoveItem
   name: RemoveItem()
   href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_RemoveItem
@@ -75,32 +49,6 @@ references:
   isSpec: "True"
   fullName: BackpackFunctionalityTest.RemoveItem
   nameWithType: BackpackFunctionalityTest.RemoveItem
-- uid: Global.BackpackFunctionalityTest.SaveInventory_NO_Encryption
-  name: SaveInventory_NO_Encryption()
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_SaveInventory_NO_Encryption
-  commentId: M:Global.BackpackFunctionalityTest.SaveInventory_NO_Encryption
-  fullName: BackpackFunctionalityTest.SaveInventory_NO_Encryption()
-  nameWithType: BackpackFunctionalityTest.SaveInventory_NO_Encryption()
-- uid: Global.BackpackFunctionalityTest.SaveInventory_NO_Encryption*
-  name: SaveInventory_NO_Encryption
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_SaveInventory_NO_Encryption_
-  commentId: Overload:Global.BackpackFunctionalityTest.SaveInventory_NO_Encryption
-  isSpec: "True"
-  fullName: BackpackFunctionalityTest.SaveInventory_NO_Encryption
-  nameWithType: BackpackFunctionalityTest.SaveInventory_NO_Encryption
-- uid: Global.BackpackFunctionalityTest.TearDown
-  name: TearDown()
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_TearDown
-  commentId: M:Global.BackpackFunctionalityTest.TearDown
-  fullName: BackpackFunctionalityTest.TearDown()
-  nameWithType: BackpackFunctionalityTest.TearDown()
-- uid: Global.BackpackFunctionalityTest.TearDown*
-  name: TearDown
-  href: api/Global.BackpackFunctionalityTest.html#Global_BackpackFunctionalityTest_TearDown_
-  commentId: Overload:Global.BackpackFunctionalityTest.TearDown
-  isSpec: "True"
-  fullName: BackpackFunctionalityTest.TearDown
-  nameWithType: BackpackFunctionalityTest.TearDown
 - uid: Global.BackpackItemsValidNamingTest
   name: BackpackItemsValidNamingTest
   href: api/Global.BackpackItemsValidNamingTest.html
@@ -161,24 +109,6 @@ references:
   commentId: F:Global.Hint.Summary
   fullName: Hint.Summary
   nameWithType: Hint.Summary
-- uid: Global.InventoryManager
-  name: InventoryManager
-  href: api/Global.InventoryManager.html
-  commentId: T:Global.InventoryManager
-  fullName: InventoryManager
-  nameWithType: InventoryManager
-- uid: Global.InventoryManager.Backpack
-  name: Backpack
-  href: api/Global.InventoryManager.html#Global_InventoryManager_Backpack
-  commentId: F:Global.InventoryManager.Backpack
-  fullName: InventoryManager.Backpack
-  nameWithType: InventoryManager.Backpack
-- uid: Global.InventoryManager.Hints
-  name: Hints
-  href: api/Global.InventoryManager.html#Global_InventoryManager_Hints
-  commentId: F:Global.InventoryManager.Hints
-  fullName: InventoryManager.Hints
-  nameWithType: InventoryManager.Hints
 - uid: Global.RandomEnumerableGenerator
   name: RandomEnumerableGenerator
   href: api/Global.RandomEnumerableGenerator.html
@@ -308,6 +238,23 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).GetAll
   nameWithType: InventoryBase<T>.GetAll
   nameWithType.vb: InventoryBase(Of T).GetAll
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetInventorySaveData
+  name: GetInventorySaveData()
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetInventorySaveData
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetInventorySaveData
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.GetInventorySaveData()
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).GetInventorySaveData()
+  nameWithType: InventoryBase<T>.GetInventorySaveData()
+  nameWithType.vb: InventoryBase(Of T).GetInventorySaveData()
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetInventorySaveData*
+  name: GetInventorySaveData
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetInventorySaveData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetInventorySaveData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.GetInventorySaveData
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).GetInventorySaveData
+  nameWithType: InventoryBase<T>.GetInventorySaveData
+  nameWithType.vb: InventoryBase(Of T).GetInventorySaveData
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.HasItem(`0)
   name: HasItem(T)
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_HasItem__0_
@@ -342,24 +289,24 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).InventoryName
   nameWithType: InventoryBase<T>.InventoryName
   nameWithType.vb: InventoryBase(Of T).InventoryName
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventory(System.Boolean,System.String,System.String)
-  name: LoadInventory(bool, string, string)
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventory_System_Boolean_System_String_System_String_
-  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventory(System.Boolean,System.String,System.String)
-  name.vb: LoadInventory(Boolean, String, String)
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventory(bool, string, string)
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventory(Boolean, String, String)
-  nameWithType: InventoryBase<T>.LoadInventory(bool, string, string)
-  nameWithType.vb: InventoryBase(Of T).LoadInventory(Boolean, String, String)
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventory*
-  name: LoadInventory
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventory_
-  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventory
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name: LoadInventoryData(List<ItemSaveData>)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name.vb: LoadInventoryData(List(Of ItemSaveData))
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData(System.Collections.Generic.List<Studio23.SS2.InventorySystem.Data.ItemSaveData>)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData(System.Collections.Generic.List(Of Studio23.SS2.InventorySystem.Data.ItemSaveData))
+  nameWithType: InventoryBase<T>.LoadInventoryData(List<ItemSaveData>)
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryData(List(Of ItemSaveData))
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData*
+  name: LoadInventoryData
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData
   isSpec: "True"
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventory
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventory
-  nameWithType: InventoryBase<T>.LoadInventory
-  nameWithType.vb: InventoryBase(Of T).LoadInventory
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData
+  nameWithType: InventoryBase<T>.LoadInventoryData
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryData
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemAdded
   name: OnItemAdded
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemAdded
@@ -393,32 +340,6 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).RemoveItem
   nameWithType: InventoryBase<T>.RemoveItem
   nameWithType.vb: InventoryBase(Of T).RemoveItem
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveDirectory
-  name: SaveDirectory
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_SaveDirectory
-  commentId: F:Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveDirectory
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.SaveDirectory
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).SaveDirectory
-  nameWithType: InventoryBase<T>.SaveDirectory
-  nameWithType.vb: InventoryBase(Of T).SaveDirectory
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveInventory(System.Boolean,System.String,System.String)
-  name: SaveInventory(bool, string, string)
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_SaveInventory_System_Boolean_System_String_System_String_
-  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveInventory(System.Boolean,System.String,System.String)
-  name.vb: SaveInventory(Boolean, String, String)
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.SaveInventory(bool, string, string)
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).SaveInventory(Boolean, String, String)
-  nameWithType: InventoryBase<T>.SaveInventory(bool, string, string)
-  nameWithType.vb: InventoryBase(Of T).SaveInventory(Boolean, String, String)
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveInventory*
-  name: SaveInventory
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_SaveInventory_
-  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.SaveInventory
-  isSpec: "True"
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.SaveInventory
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).SaveInventory
-  nameWithType: InventoryBase<T>.SaveInventory
-  nameWithType.vb: InventoryBase(Of T).SaveInventory
 - uid: Studio23.SS2.InventorySystem.Data
   name: Studio23.SS2.InventorySystem.Data
   href: api/Studio23.SS2.InventorySystem.Data.html
@@ -600,3 +521,82 @@ references:
   isSpec: "True"
   fullName: Studio23.SS2.InventorySystem.Editor.InventorySystemWizard.ShowWindow
   nameWithType: InventorySystemWizard.ShowWindow
+- uid: Studio23.SS2.InventorySystem.Samples
+  name: Studio23.SS2.InventorySystem.Samples
+  href: api/Studio23.SS2.InventorySystem.Samples.html
+  commentId: N:Studio23.SS2.InventorySystem.Samples
+  fullName: Studio23.SS2.InventorySystem.Samples
+  nameWithType: Studio23.SS2.InventorySystem.Samples
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager
+  name: HintManager
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html
+  commentId: T:Studio23.SS2.InventorySystem.Samples.HintManager
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager
+  nameWithType: HintManager
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData(System.String)
+  name: AssignSerializedData(string)
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_AssignSerializedData_System_String_
+  commentId: M:Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData(System.String)
+  name.vb: AssignSerializedData(String)
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData(string)
+  fullName.vb: Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData(String)
+  nameWithType: HintManager.AssignSerializedData(string)
+  nameWithType.vb: HintManager.AssignSerializedData(String)
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData*
+  name: AssignSerializedData
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_AssignSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.AssignSerializedData
+  nameWithType: HintManager.AssignSerializedData
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData
+  name: GetSerializedData()
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_GetSerializedData
+  commentId: M:Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData()
+  nameWithType: HintManager.GetSerializedData()
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData*
+  name: GetSerializedData
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_GetSerializedData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.GetSerializedData
+  nameWithType: HintManager.GetSerializedData
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID
+  name: GetUniqueID()
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_GetUniqueID
+  commentId: M:Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID()
+  nameWithType: HintManager.GetUniqueID()
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID*
+  name: GetUniqueID
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_GetUniqueID_
+  commentId: Overload:Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.GetUniqueID
+  nameWithType: HintManager.GetUniqueID
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.HintList
+  name: HintList
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_HintList
+  commentId: F:Studio23.SS2.InventorySystem.Samples.HintManager.HintList
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.HintList
+  nameWithType: HintManager.HintList
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.Hints
+  name: Hints
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_Hints
+  commentId: F:Studio23.SS2.InventorySystem.Samples.HintManager.Hints
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.Hints
+  nameWithType: HintManager.Hints
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList
+  name: ReInitList()
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_ReInitList
+  commentId: M:Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList()
+  nameWithType: HintManager.ReInitList()
+- uid: Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList*
+  name: ReInitList
+  href: api/Studio23.SS2.InventorySystem.Samples.HintManager.html#Studio23_SS2_InventorySystem_Samples_HintManager_ReInitList_
+  commentId: Overload:Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Samples.HintManager.ReInitList
+  nameWithType: HintManager.ReInitList

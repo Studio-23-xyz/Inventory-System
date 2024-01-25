@@ -2,7 +2,7 @@
   "api/Global.BackpackFunctionalityTest.html": {
     "href": "api/Global.BackpackFunctionalityTest.html",
     "title": "Class BackpackFunctionalityTest | |",
-    "keywords": "Class BackpackFunctionalityTest Namespace Global public class BackpackFunctionalityTest Inheritance object BackpackFunctionalityTest Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods Encrypted_Save_Load() public IEnumerator Encrypted_Save_Load() Returns IEnumerator HasItem() public IEnumerator HasItem() Returns IEnumerator Init() public void Init() LoadInventory_NO_Encryption() public IEnumerator LoadInventory_NO_Encryption() Returns IEnumerator RemoveItem() public IEnumerator RemoveItem() Returns IEnumerator SaveInventory_NO_Encryption() public IEnumerator SaveInventory_NO_Encryption() Returns IEnumerator TearDown() public void TearDown()"
+    "keywords": "Class BackpackFunctionalityTest Namespace Global public class BackpackFunctionalityTest Inheritance object BackpackFunctionalityTest Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods HasItem() public IEnumerator HasItem() Returns IEnumerator Init() public void Init() RemoveItem() public IEnumerator RemoveItem() Returns IEnumerator"
   },
   "api/Global.BackpackItemsValidNamingTest.html": {
     "href": "api/Global.BackpackItemsValidNamingTest.html",
@@ -13,11 +13,6 @@
     "href": "api/Global.Hint.html",
     "title": "Class Hint | |",
     "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Summary public string Summary Field Value string Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
-  },
-  "api/Global.InventoryManager.html": {
-    "href": "api/Global.InventoryManager.html",
-    "title": "Class InventoryManager | |",
-    "keywords": "Class InventoryManager Namespace Global public class InventoryManager : MonoBehaviour Inheritance object InventoryManager Fields Backpack public InventoryBase<Item> Backpack Field Value InventoryBase<Item> Hints public InventoryBase<Hint> Hints Field Value InventoryBase<Hint>"
   },
   "api/Global.RandomEnumerableGenerator.html": {
     "href": "api/Global.RandomEnumerableGenerator.html",
@@ -32,7 +27,7 @@
   "api/Global.html": {
     "href": "api/Global.html",
     "title": "Namespace | |",
-    "keywords": "Namespace Classes BackpackFunctionalityTest BackpackItemsValidNamingTest Hint InventoryManager RandomEnumerableGenerator RandomListGenerator"
+    "keywords": "Namespace Classes BackpackFunctionalityTest BackpackItemsValidNamingTest Hint RandomEnumerableGenerator RandomListGenerator"
   },
   "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.InventoryItemEvent.html",
@@ -42,7 +37,7 @@
   "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html",
     "title": "Class InventoryBase<T> | |",
-    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Fields InventoryName public readonly string InventoryName Field Value string OnItemAdded public InventoryBase<T>.InventoryItemEvent OnItemAdded Field Value InventoryBase<T>.InventoryItemEvent OnItemRemoved public InventoryBase<T>.InventoryItemEvent OnItemRemoved Field Value InventoryBase<T>.InventoryItemEvent SaveDirectory public string SaveDirectory Field Value string Methods AddItem(T) public bool AddItem(T item) Parameters item T Returns bool AddItemUnique(T) public bool AddItemUnique(T item) Parameters item T Returns bool GetAll() public List<T> GetAll() Returns List<T> HasItem(T) public bool HasItem(T item) Parameters item T Returns bool LoadInventory(bool, string, string) Loads the saved inventory data using savesystem library public virtual UniTask LoadInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask RemoveItem(T) public bool RemoveItem(T item) Parameters item T Returns bool SaveInventory(bool, string, string) Saves inventory data using savesystem library public virtual UniTask SaveInventory(bool enableEncryption = true, string encryptionKey = \"1234567812345678\", string encryptionIV = \"1234567876543218\") Parameters enableEncryption bool encryptionKey string encryptionIV string Returns UniTask"
+    "keywords": "Class InventoryBase<T> Namespace Studio23.SS2.InventorySystem.Core Create New inventories by passing new types of objects. This is the base class. public class InventoryBase<T> where T : ItemBase Type Parameters T Inheritance object InventoryBase<T> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors InventoryBase(string) public InventoryBase(string inventoryName) Parameters inventoryName string Create New inventories by passing new types of objects. This is the base class. Fields InventoryName public readonly string InventoryName Field Value string Create New inventories by passing new types of objects. This is the base class. OnItemAdded public InventoryBase<T>.InventoryItemEvent OnItemAdded Field Value InventoryBase<T>.InventoryItemEvent Create New inventories by passing new types of objects. This is the base class. OnItemRemoved public InventoryBase<T>.InventoryItemEvent OnItemRemoved Field Value InventoryBase<T>.InventoryItemEvent Create New inventories by passing new types of objects. This is the base class. Methods AddItem(T) public bool AddItem(T item) Parameters item T Create New inventories by passing new types of objects. This is the base class. Returns bool Create New inventories by passing new types of objects. This is the base class. AddItemUnique(T) public bool AddItemUnique(T item) Parameters item T Create New inventories by passing new types of objects. This is the base class. Returns bool Create New inventories by passing new types of objects. This is the base class. GetAll() public List<T> GetAll() Returns List<T> Create New inventories by passing new types of objects. This is the base class. GetInventorySaveData() public virtual List<ItemSaveData> GetInventorySaveData() Returns List<ItemSaveData> Create New inventories by passing new types of objects. This is the base class. HasItem(T) public bool HasItem(T item) Parameters item T Create New inventories by passing new types of objects. This is the base class. Returns bool Create New inventories by passing new types of objects. This is the base class. LoadInventoryData(List<ItemSaveData>) public virtual void LoadInventoryData(List<ItemSaveData> loadedItemDatas) Parameters loadedItemDatas List<ItemSaveData> Create New inventories by passing new types of objects. This is the base class. RemoveItem(T) public bool RemoveItem(T item) Parameters item T Create New inventories by passing new types of objects. This is the base class. Returns bool Create New inventories by passing new types of objects. This is the base class."
   },
   "api/Studio23.SS2.InventorySystem.Core.html": {
     "href": "api/Studio23.SS2.InventorySystem.Core.html",
@@ -62,7 +57,7 @@
   "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html",
     "title": "Class ItemSaveData | |",
-    "keywords": "Class ItemSaveData Namespace Studio23.SS2.InventorySystem.Data Stores data per Itembase [Serializable] public class ItemSaveData Inheritance object ItemSaveData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ItemSaveData(string, string) public ItemSaveData(string SOName, string ItemData) Parameters SOName string ItemData string Fields ItemData The saved data for an Item's internal state public string ItemData Field Value string SOName the item SO's asset name public string SOName Field Value string"
+    "keywords": "Class ItemSaveData Namespace Studio23.SS2.InventorySystem.Data Stores data per Itembase [Serializable] public class ItemSaveData Inheritance object ItemSaveData Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Constructors ItemSaveData(string, string) public ItemSaveData(string SOName, string ItemData) Parameters SOName string Stores data per Itembase ItemData string Stores data per Itembase Fields ItemData The saved data for an Item's internal state public string ItemData Field Value string Stores data per Itembase SOName the item SO's asset name public string SOName Field Value string Stores data per Itembase"
   },
   "api/Studio23.SS2.InventorySystem.Data.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.html",
@@ -84,6 +79,16 @@
     "title": "Namespace Studio23.SS2.InventorySystem.Editor | |",
     "keywords": "Namespace Studio23.SS2.InventorySystem.Editor Classes BackpackEditorWindow InventorySystemWizard"
   },
+  "api/Studio23.SS2.InventorySystem.Samples.HintManager.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Samples.HintManager.html",
+    "title": "Class HintManager | |",
+    "keywords": "Class HintManager Namespace Studio23.SS2.InventorySystem.Samples public class HintManager : MonoBehaviour, ISaveable Inheritance object HintManager Implements ISaveable Fields HintList public List<Hint> HintList Field Value List<Hint> Hints public InventoryBase<Hint> Hints Field Value InventoryBase<Hint> Methods AssignSerializedData(string) public void AssignSerializedData(string data) Parameters data string GetSerializedData() public string GetSerializedData() Returns string GetUniqueID() public string GetUniqueID() Returns string ReInitList() public void ReInitList()"
+  },
+  "api/Studio23.SS2.InventorySystem.Samples.html": {
+    "href": "api/Studio23.SS2.InventorySystem.Samples.html",
+    "title": "Namespace Studio23.SS2.InventorySystem.Samples | |",
+    "keywords": "Namespace Studio23.SS2.InventorySystem.Samples Classes HintManager"
+  },
   "api/index.html": {
     "href": "api/index.html",
     "title": "| |",
@@ -92,7 +97,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v1.3.1] - 2023-11-20 Updated Added Some null checks and Warnings for LoadInventoryMethod. [v1.2.3] - 2023-11-1 Updated Fixed folder strucutre in the main branch [v1.2.1] - 2023-11-1 Updated Added Demo samples Changed dependency [v1.2.0] - 2023-10-27 Updated Moved Some data classes to samples Now Inventory Base Fires Event on item add and remove [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
+    "keywords": "Changelog [v2.0.0] - 2024-01-17 Updated Removed dependency from savesystem Now Inventory base do not need any async method. [v1.3.1] - 2023-11-20 Updated Added Some null checks and Warnings for LoadInventoryMethod. [v1.2.3] - 2023-11-1 Updated Fixed folder strucutre in the main branch [v1.2.1] - 2023-11-1 Updated Added Demo samples Changed dependency [v1.2.0] - 2023-10-27 Updated Moved Some data classes to samples Now Inventory Base Fires Event on item add and remove [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
   },
   "index.html": {
     "href": "index.html",
