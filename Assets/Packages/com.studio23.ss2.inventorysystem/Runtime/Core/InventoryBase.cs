@@ -66,16 +66,21 @@ namespace Studio23.SS2.InventorySystem.Core
 
             foreach (var item in _items)
             {
-                var itemSaveData = new ItemSaveData(item.name, item.GetSerializedData());
+                ItemSaveData itemSaveData = CreateSaveDataForItem(item);
                 savedItemsData.Add(itemSaveData);
             }
 
             return savedItemsData;
         }
 
+        protected virtual ItemSaveData CreateSaveDataForItem(T item)
+        {
+            var itemSaveData = new ItemSaveData(item.name, item.GetSerializedData());
+            return itemSaveData;
+        }
+
         public virtual void LoadInventoryData(List<ItemSaveData> loadedItemDatas)
         {
-
             _items.Clear();
 
             if (loadedItemDatas == null)
@@ -86,7 +91,7 @@ namespace Studio23.SS2.InventorySystem.Core
 
             foreach (var loadedItemData in loadedItemDatas)
             {
-                T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+                T item = LoadItemAssetFromItemData(loadedItemData);
                 if (item == null)
                 {
                     Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
@@ -95,6 +100,12 @@ namespace Studio23.SS2.InventorySystem.Core
                 item.AssignSerializedData(loadedItemData.ItemData);
                 _items.Add(item);
             }
+        }
+
+        private T LoadItemAssetFromItemData(ItemSaveData loadedItemData)
+        {
+            T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+            return item;
         }
     }
 }
