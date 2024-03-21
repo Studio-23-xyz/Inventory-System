@@ -221,6 +221,23 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).AddItemUnique
   nameWithType: InventoryBase<T>.AddItemUnique
   nameWithType.vb: InventoryBase(Of T).AddItemUnique
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.CreateSaveDataForItem(`0)
+  name: CreateSaveDataForItem(T)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_CreateSaveDataForItem__0_
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.CreateSaveDataForItem(`0)
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.CreateSaveDataForItem(T)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).CreateSaveDataForItem(T)
+  nameWithType: InventoryBase<T>.CreateSaveDataForItem(T)
+  nameWithType.vb: InventoryBase(Of T).CreateSaveDataForItem(T)
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.CreateSaveDataForItem*
+  name: CreateSaveDataForItem
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_CreateSaveDataForItem_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.CreateSaveDataForItem
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.CreateSaveDataForItem
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).CreateSaveDataForItem
+  nameWithType: InventoryBase<T>.CreateSaveDataForItem
+  nameWithType.vb: InventoryBase(Of T).CreateSaveDataForItem
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetAll
   name: GetAll()
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetAll
