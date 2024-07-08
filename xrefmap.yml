@@ -306,24 +306,24 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).InventoryName
   nameWithType: InventoryBase<T>.InventoryName
   nameWithType.vb: InventoryBase(Of T).InventoryName
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
-  name: LoadInventoryData(List<ItemSaveData>)
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__
-  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
-  name.vb: LoadInventoryData(List(Of ItemSaveData))
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData(System.Collections.Generic.List<Studio23.SS2.InventorySystem.Data.ItemSaveData>)
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData(System.Collections.Generic.List(Of Studio23.SS2.InventorySystem.Data.ItemSaveData))
-  nameWithType: InventoryBase<T>.LoadInventoryData(List<ItemSaveData>)
-  nameWithType.vb: InventoryBase(Of T).LoadInventoryData(List(Of ItemSaveData))
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData*
-  name: LoadInventoryData
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_
-  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name: LoadInventoryDataAsync(List<ItemSaveData>)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryDataAsync_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name.vb: LoadInventoryDataAsync(List(Of ItemSaveData))
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryDataAsync(System.Collections.Generic.List<Studio23.SS2.InventorySystem.Data.ItemSaveData>)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryDataAsync(System.Collections.Generic.List(Of Studio23.SS2.InventorySystem.Data.ItemSaveData))
+  nameWithType: InventoryBase<T>.LoadInventoryDataAsync(List<ItemSaveData>)
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryDataAsync(List(Of ItemSaveData))
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync*
+  name: LoadInventoryDataAsync
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryDataAsync_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync
   isSpec: "True"
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData
-  nameWithType: InventoryBase<T>.LoadInventoryData
-  nameWithType.vb: InventoryBase(Of T).LoadInventoryData
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryDataAsync
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryDataAsync
+  nameWithType: InventoryBase<T>.LoadInventoryDataAsync
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryDataAsync
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemAdded
   name: OnItemAdded
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemAdded

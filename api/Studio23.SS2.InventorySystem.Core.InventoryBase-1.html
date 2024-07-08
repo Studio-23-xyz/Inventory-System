@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./../public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
     <header class="bg-body border-bottom">
@@ -77,7 +77,7 @@
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
             <i class="bi bi-list"></i>
           </button>
 
@@ -89,7 +89,7 @@
 
 
   <h1 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1" class="text-break">
-Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -162,7 +162,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1__ctor_System_String_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor(System.String)">
   InventoryBase(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -196,7 +196,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_InventoryName" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.InventoryName">
   InventoryName
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L18"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -226,7 +226,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemAdded" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemAdded">
   OnItemAdded
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -256,7 +256,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_OnItemRemoved" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.OnItemRemoved">
   OnItemRemoved
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L23"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -291,7 +291,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_AddItem__0_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItem(`0)">
   AddItem(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -327,7 +327,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_AddItemUnique__0_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.AddItemUnique(`0)">
   AddItemUnique(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L48"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -363,7 +363,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_CreateSaveDataForItem__0_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.CreateSaveDataForItem(`0)">
   CreateSaveDataForItem(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L78"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -399,7 +399,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetAll" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetAll">
   GetAll()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L60"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L62"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -430,7 +430,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_GetInventorySaveData" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.GetInventorySaveData">
   GetInventorySaveData()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L65"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -461,7 +461,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_HasItem__0_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.HasItem(`0)">
   HasItem(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L57"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -493,18 +493,18 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
 
 
-  <a id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData*"></a>
+  <a id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryDataAsync_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync*"></a>
 
-  <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})">
-  LoadInventoryData(List&lt;ItemSaveData&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryDataAsync_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})">
+  LoadInventoryDataAsync(List&lt;ItemSaveData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L84"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual void LoadInventoryData(List&lt;ItemSaveData&gt; loadedItemDatas)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual UniTask LoadInventoryDataAsync(List&lt;ItemSaveData&gt; loadedItemDatas)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -513,6 +513,11 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
     <dd></dd>
   </dl>
 
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">UniTask</span></dt>
+    <dd></dd>
+  </dl>
 
 
 
@@ -528,7 +533,7 @@ Class InventoryBase&lt;T&gt;  <a class="header-action link-secondary" title="Vie
 
   <h3 id="Studio23_SS2_InventorySystem_Core_InventoryBase_1_RemoveItem__0_" data-uid="Studio23.SS2.InventorySystem.Core.InventoryBase`1.RemoveItem(`0)">
   RemoveItem(T)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Studio-23-xyz/Inventory-System/blob/main/Assets/Packages/com.studio23.ss2.inventorysystem/Runtime/Core/InventoryBase.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
