@@ -1,5 +1,10 @@
 # Changelog
 
+## [v2.0.1] - 2024-07-08
+
+### Updated
+
++ Breaking Change. Now resource loading is Asynchronous
 
 ## [v2.0.0] - 2024-01-17
 

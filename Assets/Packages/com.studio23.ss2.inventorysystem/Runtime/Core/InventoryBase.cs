@@ -1,7 +1,9 @@
 using Studio23.SS2.InventorySystem.Data;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using System.Threading.Tasks;
 
 [assembly: InternalsVisibleTo("com.studio23.ss2.inventorysystem.playmodetests")]
 namespace Studio23.SS2.InventorySystem.Core
@@ -79,7 +81,7 @@ namespace Studio23.SS2.InventorySystem.Core
             return itemSaveData;
         }
 
-        public virtual void LoadInventoryData(List<ItemSaveData> loadedItemDatas)
+        public virtual async UniTask LoadInventoryDataAsync(List<ItemSaveData> loadedItemDatas)
         {
             _items.Clear();
 
@@ -91,7 +93,7 @@ namespace Studio23.SS2.InventorySystem.Core
 
             foreach (var loadedItemData in loadedItemDatas)
             {
-                T item = LoadItemAssetFromItemData(loadedItemData);
+                T item = await LoadItemAssetFromItemData(loadedItemData);
                 if (item == null)
                 {
                     Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
@@ -102,10 +104,11 @@ namespace Studio23.SS2.InventorySystem.Core
             }
         }
 
-        private T LoadItemAssetFromItemData(ItemSaveData loadedItemData)
+        private async UniTask<T> LoadItemAssetFromItemData(ItemSaveData loadedItemData)
         {
-            T item = Resources.Load<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
-            return item;
+            ResourceRequest resourceRequest = Resources.LoadAsync<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+            await resourceRequest;
+            return resourceRequest.asset as T;
         }
     }
 }

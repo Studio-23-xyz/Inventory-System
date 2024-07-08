@@ -47,7 +47,7 @@ namespace Studio23.SS2.InventorySystem.Samples
         public void AssignSerializedData(string data)
         {
             List<ItemSaveData> items = JsonConvert.DeserializeObject<List<ItemSaveData>> (data);
-            Hints.LoadInventoryData(items);
+            Hints.LoadInventoryDataAsync(items);
         }
 
         public string GetSerializedData()
