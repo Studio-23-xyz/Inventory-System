@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine.AddressableAssets;
 
 [assembly: InternalsVisibleTo("com.studio23.ss2.inventorysystem.playmodetests")]
 namespace Studio23.SS2.InventorySystem.Core
@@ -14,6 +15,8 @@ namespace Studio23.SS2.InventorySystem.Core
     /// <typeparam name="T"></typeparam>
     public class InventoryBase<T> where T : ItemBase
     {
+        //#TODO refactor item fetching logic into a provider class
+        private bool _loadFromAddressable;
         [SerializeField] private List<T> _items;
         public readonly string InventoryName;
 
@@ -22,10 +25,11 @@ namespace Studio23.SS2.InventorySystem.Core
         public InventoryItemEvent OnItemAdded;
         public InventoryItemEvent OnItemRemoved;
 
-        public InventoryBase(string inventoryName)
+        public InventoryBase(string inventoryName, bool loadFromAddressable = false)
         {
             InventoryName = inventoryName;
             _items = new List<T>();
+            _loadFromAddressable = loadFromAddressable;
         }
 
         public bool AddItem(T item)
@@ -93,7 +97,30 @@ namespace Studio23.SS2.InventorySystem.Core
 
             foreach (var loadedItemData in loadedItemDatas)
             {
-                T item = await LoadItemAssetFromItemData(loadedItemData);
+                T item = await LoadItemAssetFromItemDataAsync(loadedItemData);
+                if (item == null)
+                {
+                    Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
+                    continue;
+                }
+                item.AssignSerializedData(loadedItemData.ItemData);
+                _items.Add(item);
+            }
+        }
+        
+        public virtual void LoadInventoryData(List<ItemSaveData> loadedItemDatas)
+        {
+            _items.Clear();
+
+            if (loadedItemDatas == null)
+            {
+                Debug.LogWarning($"No inventory file found for {InventoryName}, Save Inventory First");
+                return;
+            }
+
+            foreach (var loadedItemData in loadedItemDatas)
+            {
+                T item = LoadItemAssetFromItemData(loadedItemData);
                 if (item == null)
                 {
                     Debug.LogWarning($"{loadedItemData.SOName} was not found in resources. Was perhaps deleted?");
@@ -104,11 +131,43 @@ namespace Studio23.SS2.InventorySystem.Core
             }
         }
 
-        private async UniTask<T> LoadItemAssetFromItemData(ItemSaveData loadedItemData)
+        private T LoadItemAssetFromItemData(ItemSaveData loadedItemData)
         {
-            ResourceRequest resourceRequest = Resources.LoadAsync<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
-            await resourceRequest;
-            return resourceRequest.asset as T;
+            string path = $"Inventory System/{InventoryName}/{loadedItemData.SOName}";
+            Debug.LogWarning($"_loadFromAddressable {_loadFromAddressable} " + path);
+
+            if (_loadFromAddressable)
+            {
+                var handle = Addressables.LoadAssetAsync<T>(
+                    path);
+                handle.WaitForCompletion();
+                Debug.LogWarning($"path equal {path}  ({(path == "Inventory System/Abilities/Ability_WriterVision")}):  {handle.Result}", handle.Result);
+
+                return handle.Result;
+            }
+            else
+            {
+                return Resources.Load<T>(path);
+            }
+        }
+        private async UniTask<T> LoadItemAssetFromItemDataAsync(ItemSaveData loadedItemData)
+        {
+            if (_loadFromAddressable)
+            {
+                var path = $"Inventory System/{InventoryName}/{loadedItemData.SOName}";
+                var handle = Addressables.LoadAssetAsync<T>(
+                    path);
+                await handle;
+                Debug.LogWarning($"path {path} equal ({(path == "Inventory System/Abilities/Ability_WriterVision")}):  {handle.Result}", handle.Result);
+                return handle.Result;
+            }
+            else
+            {
+                ResourceRequest resourceRequest = Resources.LoadAsync<T>($"Inventory System/{InventoryName}/{loadedItemData.SOName}");
+                await resourceRequest;
+                return resourceRequest.asset as T;
+            }
+
         }
     }
 }
