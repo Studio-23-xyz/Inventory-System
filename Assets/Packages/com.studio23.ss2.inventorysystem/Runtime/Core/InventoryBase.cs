@@ -134,15 +134,11 @@ namespace Studio23.SS2.InventorySystem.Core
         private T LoadItemAssetFromItemData(ItemSaveData loadedItemData)
         {
             string path = $"Inventory System/{InventoryName}/{loadedItemData.SOName}";
-            Debug.LogWarning($"_loadFromAddressable {_loadFromAddressable} " + path);
-
             if (_loadFromAddressable)
             {
                 var handle = Addressables.LoadAssetAsync<T>(
                     path);
                 handle.WaitForCompletion();
-                Debug.LogWarning($"path equal {path}  ({(path == "Inventory System/Abilities/Ability_WriterVision")}):  {handle.Result}", handle.Result);
-
                 return handle.Result;
             }
             else
@@ -158,7 +154,6 @@ namespace Studio23.SS2.InventorySystem.Core
                 var handle = Addressables.LoadAssetAsync<T>(
                     path);
                 await handle;
-                Debug.LogWarning($"path {path} equal ({(path == "Inventory System/Abilities/Ability_WriterVision")}):  {handle.Result}", handle.Result);
                 return handle.Result;
             }
             else
