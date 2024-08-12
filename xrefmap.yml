@@ -168,15 +168,15 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T)
   nameWithType: InventoryBase<T>
   nameWithType.vb: InventoryBase(Of T)
-- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor(System.String)
-  name: InventoryBase(string)
-  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1__ctor_System_String_
-  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor(System.String)
-  name.vb: New(String)
-  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.InventoryBase(string)
-  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).New(String)
-  nameWithType: InventoryBase<T>.InventoryBase(string)
-  nameWithType.vb: InventoryBase(Of T).New(String)
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor(System.String,System.Boolean)
+  name: InventoryBase(string, bool)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1__ctor_System_String_System_Boolean_
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor(System.String,System.Boolean)
+  name.vb: New(String, Boolean)
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.InventoryBase(string, bool)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).New(String, Boolean)
+  nameWithType: InventoryBase<T>.InventoryBase(string, bool)
+  nameWithType.vb: InventoryBase(Of T).New(String, Boolean)
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.#ctor*
   name: InventoryBase
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1__ctor_
@@ -306,6 +306,24 @@ references:
   fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).InventoryName
   nameWithType: InventoryBase<T>.InventoryName
   nameWithType.vb: InventoryBase(Of T).InventoryName
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name: LoadInventoryData(List<ItemSaveData>)
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__
+  commentId: M:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
+  name.vb: LoadInventoryData(List(Of ItemSaveData))
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData(System.Collections.Generic.List<Studio23.SS2.InventorySystem.Data.ItemSaveData>)
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData(System.Collections.Generic.List(Of Studio23.SS2.InventorySystem.Data.ItemSaveData))
+  nameWithType: InventoryBase<T>.LoadInventoryData(List<ItemSaveData>)
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryData(List(Of ItemSaveData))
+- uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData*
+  name: LoadInventoryData
+  href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryData_
+  commentId: Overload:Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryData
+  isSpec: "True"
+  fullName: Studio23.SS2.InventorySystem.Core.InventoryBase<T>.LoadInventoryData
+  fullName.vb: Studio23.SS2.InventorySystem.Core.InventoryBase(Of T).LoadInventoryData
+  nameWithType: InventoryBase<T>.LoadInventoryData
+  nameWithType.vb: InventoryBase(Of T).LoadInventoryData
 - uid: Studio23.SS2.InventorySystem.Core.InventoryBase`1.LoadInventoryDataAsync(System.Collections.Generic.List{Studio23.SS2.InventorySystem.Data.ItemSaveData})
   name: LoadInventoryDataAsync(List<ItemSaveData>)
   href: api/Studio23.SS2.InventorySystem.Core.InventoryBase-1.html#Studio23_SS2_InventorySystem_Core_InventoryBase_1_LoadInventoryDataAsync_System_Collections_Generic_List_Studio23_SS2_InventorySystem_Data_ItemSaveData__
