@@ -12,7 +12,7 @@
   "api/Global.Hint.html": {
     "href": "api/Global.Hint.html",
     "title": "Class Hint | |",
-    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Summary public string Summary Field Value string Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
+    "keywords": "Class Hint Namespace Global public class Hint : ItemBase Inheritance object ItemBase Hint Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description ItemBase.NameLocalizedString ItemBase.DescriptionLocalizedString Fields Summary public string Summary Field Value string Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
   },
   "api/Global.RandomEnumerableGenerator.html": {
     "href": "api/Global.RandomEnumerableGenerator.html",
@@ -47,12 +47,12 @@
   "api/Studio23.SS2.InventorySystem.Data.Item.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.Item.html",
     "title": "Class Item | |",
-    "keywords": "Class Item Namespace Studio23.SS2.InventorySystem.Data [Serializable] public class Item : ItemBase Inheritance object ItemBase Item Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description Fields Icon public Sprite Icon Field Value Sprite Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
+    "keywords": "Class Item Namespace Studio23.SS2.InventorySystem.Data [Serializable] public class Item : ItemBase Inheritance object ItemBase Item Inherited Members ItemBase.Id ItemBase.Name ItemBase.Description ItemBase.NameLocalizedString ItemBase.DescriptionLocalizedString Fields Icon public Sprite Icon Field Value Sprite Methods AssignSerializedData(string) public override void AssignSerializedData(string data) Parameters data string GetSerializedData() public override string GetSerializedData() Returns string"
   },
   "api/Studio23.SS2.InventorySystem.Data.ItemBase.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.ItemBase.html",
     "title": "Class ItemBase | |",
-    "keywords": "Class ItemBase Namespace Studio23.SS2.InventorySystem.Data public abstract class ItemBase : ScriptableObject Inheritance object ItemBase Derived Hint Item Fields Description public string Description Field Value string Id public string Id Field Value string Name public string Name Field Value string Methods AssignSerializedData(string) public abstract void AssignSerializedData(string data) Parameters data string GetSerializedData() public abstract string GetSerializedData() Returns string"
+    "keywords": "Class ItemBase Namespace Studio23.SS2.InventorySystem.Data public abstract class ItemBase : ScriptableObject Inheritance object ItemBase Derived Hint Item Fields Description public string Description Field Value string DescriptionLocalizedString public LocalizedString DescriptionLocalizedString Field Value LocalizedString Id public string Id Field Value string Name public string Name Field Value string NameLocalizedString public LocalizedString NameLocalizedString Field Value LocalizedString Methods AssignSerializedData(string) public abstract void AssignSerializedData(string data) Parameters data string GetSerializedData() public abstract string GetSerializedData() Returns string"
   },
   "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html": {
     "href": "api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html",
@@ -97,7 +97,7 @@
   "changelog/CHANGELOG.html": {
     "href": "changelog/CHANGELOG.html",
     "title": "Changelog | |",
-    "keywords": "Changelog [v2.0.1] - 2024-07-08 Updated Breaking Change. Now resource loading is Asynchronous [v2.0.0] - 2024-01-17 Updated Removed dependency from savesystem Now Inventory base do not need any async method. [v1.3.1] - 2023-11-20 Updated Added Some null checks and Warnings for LoadInventoryMethod. [v1.2.3] - 2023-11-1 Updated Fixed folder strucutre in the main branch [v1.2.1] - 2023-11-1 Updated Added Demo samples Changed dependency [v1.2.0] - 2023-10-27 Updated Moved Some data classes to samples Now Inventory Base Fires Event on item add and remove [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
+    "keywords": "Changelog [v2.0.2] - 2024-07-08 Updated Added localization support [v2.0.1] - 2024-07-08 Updated Breaking Change. Now resource loading is Asynchronous [v2.0.0] - 2024-01-17 Updated Removed dependency from savesystem Now Inventory base do not need any async method. [v1.3.1] - 2023-11-20 Updated Added Some null checks and Warnings for LoadInventoryMethod. [v1.2.3] - 2023-11-1 Updated Fixed folder strucutre in the main branch [v1.2.1] - 2023-11-1 Updated Added Demo samples Changed dependency [v1.2.0] - 2023-10-27 Updated Moved Some data classes to samples Now Inventory Base Fires Event on item add and remove [v1.1.1] - 2023-10-27 Added New Wizard added to streamline library usage. Can now create items via csv template Updated Now Save and load is managed by savesystem library. It's added as a dependency"
   },
   "index.html": {
     "href": "index.html",

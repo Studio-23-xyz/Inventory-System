@@ -450,6 +450,12 @@ references:
   commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.Description
   fullName: Studio23.SS2.InventorySystem.Data.ItemBase.Description
   nameWithType: ItemBase.Description
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.DescriptionLocalizedString
+  name: DescriptionLocalizedString
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_DescriptionLocalizedString
+  commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.DescriptionLocalizedString
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.DescriptionLocalizedString
+  nameWithType: ItemBase.DescriptionLocalizedString
 - uid: Studio23.SS2.InventorySystem.Data.ItemBase.GetSerializedData
   name: GetSerializedData()
   href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_GetSerializedData
@@ -475,6 +481,12 @@ references:
   commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.Name
   fullName: Studio23.SS2.InventorySystem.Data.ItemBase.Name
   nameWithType: ItemBase.Name
+- uid: Studio23.SS2.InventorySystem.Data.ItemBase.NameLocalizedString
+  name: NameLocalizedString
+  href: api/Studio23.SS2.InventorySystem.Data.ItemBase.html#Studio23_SS2_InventorySystem_Data_ItemBase_NameLocalizedString
+  commentId: F:Studio23.SS2.InventorySystem.Data.ItemBase.NameLocalizedString
+  fullName: Studio23.SS2.InventorySystem.Data.ItemBase.NameLocalizedString
+  nameWithType: ItemBase.NameLocalizedString
 - uid: Studio23.SS2.InventorySystem.Data.ItemSaveData
   name: ItemSaveData
   href: api/Studio23.SS2.InventorySystem.Data.ItemSaveData.html
