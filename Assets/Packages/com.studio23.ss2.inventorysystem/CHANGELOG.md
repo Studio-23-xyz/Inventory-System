@@ -1,5 +1,12 @@
 # Changelog
 
+## [v2.0.2] - 2024-07-08
+
+### Updated
+
++ Added localization support
+
+
 ## [v2.0.1] - 2024-07-08
 
 ### Updated
